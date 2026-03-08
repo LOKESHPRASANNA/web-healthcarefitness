@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con {
+            background-color: aquamarine;
+            height: 500px;
+            width: 500px;
+
+        }
+
+        .box {
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100px;
+            transform: translatex(400px), translatey(400px);
+            animation: box;
+
+        }
+
+        @keyframes box {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(400px, 0);
+            }
+
+            50% {
+                transform: translate(400px, 400px);
+            }
+
+            75% {
+                transform: translate(0, 400px);
+
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box">
+            <img src="C:\Users\vimal\OneDrive\Desktop\html class\.html\football.avif"> 
+        </div> 
+    </body>
+     </html>

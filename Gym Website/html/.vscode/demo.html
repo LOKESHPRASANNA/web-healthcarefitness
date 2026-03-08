@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: yellow;
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 2fr 3fr 4fr;
+            row-gap: 100px;
+            column-gap:100px;
+            
+
+        }
+
+        .hii{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            transition: transform 1s ease-in-out;
+        }
+        .hii:hover{
+            
+            transform: translate(50px);
+        }
+        
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        transition: transform is ease-in-out;
+        }
+        .one:hover{
+            
+            transform: scale(1.1);
+        }
+        .onee{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        transition: transform is ease-in-out;
+        }
+        .onee:hover{
+            
+            transform: rotate(360dgr);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="hii">one</div>
+        <div class="one">two</div>
+        <div class="onee">three</div>
+        <div class="hi">four</div>
+        <div class="hi">five</div>
+
+    </div>
+</body>
+
+</html>

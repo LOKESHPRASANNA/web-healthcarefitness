@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("bg.jpg");
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(203, 201, 201);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+            
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table, th, td {
+            border: 1px solid #fbfbfb;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #d4cfcf;
+        }
+
+        /* Style for the iframe */
+        iframe {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            border: none;
+            margin-top: 20px;
+            box-shadow:10px 15px 50px rgb(255, 0, 136);
+        }
+
+        /* Style for the fullscreen link */
+        .fullscreen-link {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .fullscreen-link a {
+            color: #007bff;
+            text-decoration:none;
+        }
+
+        .fullscreen-link a:hover {
+            text-decoration: underline;
+        }
+        button {
+    
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #0b0101;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registered Candidates</h1>
+        <div id="candidatesTable"></div>
+    </div>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQAyYyl9WkUmKToR98B_XhyxyhcH9UBL4KB36CRDoRXpxhohQCkNvhwO99pjBpdedUciNDWZHxPaAev/pubhtml"></iframe>
+   <a href="index.html"><button type="submit">home</button></a>
+    <!-- Link to your JavaScript file -->
+    <script>
+        // Client ID and API key from the Developer Console
+        var CLIENT_ID = 'gym-website-417616';
+        var API_KEY = 'AIzaSyA-C-I9x70gdGzi9z7oj0p3eZkw-Fp7qD4';
+
+        // Array of API discovery doc URLs for APIs used by the quickstart
+        var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+        // Authorization scopes required by the API; multiple scopes can be
+        // included, separated by spaces.
+        var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+
+        // Load the Google Sheets API asynchronously
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+
+        // Initializes the API client library and sets up sign-in state listeners.
+        function initClient() {
+            gapi.client.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
+                scope: SCOPES
+            }).then(function () {
+                // Listen for sign-in state changes.
+                gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+                // Handle the initial sign-in state.
+                updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+            });
+        }
+
+        // Called when the signed in status changes, to update the UI appropriately.
+        function updateSigninStatus(isSignedIn) {
+            if (isSignedIn) {
+                listCandidates();
+            } else {
+                // Sign out
+                gapi.auth2.getAuthInstance().signOut();
+            }
+        }
+
+        // Fetches data from the Google Sheets and displays it in a table
+        function listCandidates() {
+            gapi.client.sheets.spreadsheets.values.get({
+                spreadsheetId: '1knTFujk_b5odqSV-tqcExPZVro-kF_TWEBGGW7HlLmE',
+                range: 'Sheet1!A1:F', // Adjust the range as per your sheet
+            }).then(function(response) {
+                var values = response.result.values;
+                var candidatesTable = document.getElementById('candidatesTable');
+                candidatesTable.innerHTML = '';
+
+                if (values.length > 0) {
+                    var table = document.createElement('table');
+                    table.classList.add('dataTable');
+                    var headerRow = table.insertRow(0);
+                    for (var i = 0; i < values[0].length; i++) {
+                        var headerCell = document.createElement('th');
+                        headerCell.textContent = values[0][i];
+                        headerRow.appendChild(headerCell);
+                    }
+
+                    for (var j = 1; j < values.length; j++) {
+                        var row = table.insertRow(j);
+                        for (var k = 0; k < values[j].length; k++) {
+                            var cell = row.insertCell(k);
+                            cell.textContent = values[j][k];
+                        }
+                    }
+                    candidatesTable.appendChild(table);
+                } else {
+                    candidatesTable.textContent = 'No data found.';
+                }
+            }, function(response) {
+                candidatesTable.textContent = 'Error: ' + response.result.error.message;
+            });
+        }
+    </script>
+
+    <!-- Include the Google API library -->
+    <script src="https://apis.google.com/js/api.js?onload=handleClientLoad"></script>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</body>
+</html>
