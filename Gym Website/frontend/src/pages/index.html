@@ -25,8 +25,9 @@
             <a href="#services">services</a>
             <a href="#pricing">pricing</a>
             <a href="#register" >register</a>
-            <a href="log-in.html">login</a>
-            
+            <a href="/login">login</a>
+            <a href="/diet">Diet</a>
+            <a href="/plants">Plants</a>
         </nav>
 
         <div id="menu" class="fas fa-bars"></div>
@@ -75,7 +76,7 @@
             </div>
 
             <div class="image">
-                <img src="../../public/images/images/about.jpg" alt="">
+                <img src="/images/images/about.jpg" alt="About our gym">
             </div>
 
         </div>
@@ -93,7 +94,7 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="../../public/images/images/service1.jpg" alt="">
+                <img src="/images/images/service1.jpg" alt="Body Building Service">
                 <div class="content">
                     <h3>Body Building</h3>
                     <p>Bodybuilding enhances muscle strength and size, leading to improved physical performance and a more defined physique. 
@@ -102,7 +103,7 @@
             </div>
 
             <div class="box">
-                <img src="../../public/images/images/service2.jpg" alt="">
+                <img src="/images/images/service2.jpg" alt="Cardio Service">
                 <div class="content">
                     <h3>Cardio</h3>
                     <p>Cardiovascular exercise, or cardio, boosts heart health by improving circulation and reducing the risk of heart disease. 
@@ -111,7 +112,7 @@
             </div>
 
             <div class="box">
-                <img src="../../public/images/images/service3.jpg" alt="">
+                <img src="/images/images/service3.jpg" alt="Yoga Service">
                 <div class="content">
                     <h3>Yoga</h3>
                     <p>Yoga improves flexibility,reduces stress, promoting both physical and mental well-being. 
@@ -120,7 +121,7 @@
             </div>
 
             <div class="box">
-                <img src="../../public/images/images/service4.jpg" alt="">
+                <img src="/images/images/service4.jpg" alt="Weight Lifting Service">
                 <div class="content">
                     <h3>Weight Lifting</h3>
                     <p>Weight lifting builds muscle mass and bone density, promoting a stronger, leaner body, while also boosting metabolism and improving posture and balance.</p>
@@ -128,7 +129,7 @@
             </div>
 
             <div class="box">
-                <img src="../../public/images/images/service5.jpg" alt="">
+                <img src="/images/images/service2.jpg" alt="Cardio Training Service">
                 <div class="content">
                     <h3>Strength training</h3>
                     <p>Strength training builds muscle, increases metabolism, and enhances overall physical strength, making daily tasks easier and reducing the risk of injury. 
@@ -137,7 +138,7 @@
             </div>
 
             <div class="box">
-                <img src="../../public/images/images/service6.jpg" alt="">
+                <img src="/images/images/service6.jpg" alt="Membership Service">
                 <div class="content">
                     <h3>Memebership</h3>
                     <p>A gym membership is your passport to a healthier, more active lifestyle.It's an investment in your health, offering the tools and support you need to transform your well-being. </p>
@@ -290,19 +291,33 @@
         </form>
     </section>
     
-   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy2BxDuEqSrKNYVUJ_jO8Wui4LPehnIYLx26Z50HdE_JtieE0UyHPljcGdUjAFtFcZWw/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-
     <script>
+        const scriptURL = 'http://localhost:8080/api/registrations';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response);
+                    alert("Registration successful!\nWe will contact you soon.");
+                    
+                    // Clear form fields after successful registration
+                    document.getElementById("Name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phoneNumber").value = "";
+                    document.getElementById("age").value = "";
+                    document.getElementById("plan").selectedIndex = 0; // Reset dropdown
+                    document.getElementById("gender").selectedIndex = 0;
+                    document.getElementById("message").value = "";
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('An error occurred during registration. Please try again.');
+                });
+        });
+
         function displayPrice() {
             var planSelect = document.getElementById("plan");
             var price = planSelect.options[planSelect.selectedIndex].getAttribute("data-price");
@@ -314,29 +329,8 @@
                 priceDetails.innerHTML = "";
             }
         }
-        
     </script>
 
-    <script>
-        document.getElementById("submit-to-google-sheet").addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Your form submission logic here
-            
-            // Show popup message for successful registration
-            alert("Registration successful!");
-            
-            // Clear form fields after successful registration
-            document.getElementById("Name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("phoneNumber").value = "";
-            document.getElementById("plan").selectedIndex = 0; // Reset dropdown
-            document.getElementById("message").value = "";
-    
-            // Display statement "We will contact you soon"
-            alert("We will contact you soon.");
-        });
-    </script>
-    
 
     <!-- end -->
 
