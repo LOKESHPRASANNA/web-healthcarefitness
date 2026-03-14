@@ -152,7 +152,7 @@ html::-webkit-scrollbar-thumb{
 /* home */
 
 .home{
-    background: url(../images/home.jpg) no-repeat;
+    background: url(../../public/images/images/home.jpg) no-repeat;
     min-height: 110vh;
     display: flex;
     align-items: center;
@@ -297,7 +297,7 @@ html::-webkit-scrollbar-thumb{
 /* counter */
 
 .counter{
-    background: url(../images/bg.jpg) no-repeat;
+    background: url(../../public/images/images/home.jpg) no-repeat;
     background-attachment: fixed;
 }
 
@@ -447,7 +447,7 @@ html::-webkit-scrollbar-thumb{
 /* register */
 
 .register {
-    background: url(../images/bg.jpg) no-repeat;
+    background: url(../../public/images/images/home.jpg) no-repeat;
     background-size: cover;
     text-align: center;
     padding: 4rem 0; /* Add padding to the register section */
