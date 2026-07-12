@@ -19,18 +19,18 @@ const StatCard = ({ title, value, subtitle, icon: Icon, colorClass, delay, gradi
     initial={{ opacity: 0, y: 15 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay, duration: 0.5 }}
-    className={`card p-6 flex flex-col gap-4 border border-slate-100 backdrop-blur-md relative overflow-hidden`}
+    className={`card p-6 flex flex-col gap-4 border border-surface-200/50 backdrop-blur-md relative overflow-hidden`}
   >
     <div className={`absolute top-0 right-0 w-32 h-32 ${gradientClass} rounded-full blur-3xl opacity-20 -mr-10 -mt-10`}></div>
     <div className="flex justify-between items-start relative z-10">
       <div className={`p-3 rounded-2xl ${colorClass}`}>
-        <Icon size={24} className="text-slate-800" />
+        <Icon size={24} className="text-surface-800" />
       </div>
     </div>
     <div className="relative z-10">
-      <p className="text-slate-500 text-sm font-medium mb-1">{title}</p>
-      <h3 className="text-3xl font-bold text-slate-800 tracking-tight">{value}</h3>
-      {subtitle && <p className="text-xs text-slate-500 mt-2 font-medium">{subtitle}</p>}
+      <p className="text-surface-500 text-sm font-medium mb-1">{title}</p>
+      <h3 className="font-display text-3xl md:text-4xl font-bold text-surface-900 tracking-tight">{value}</h3>
+      {subtitle && <p className="text-xs text-surface-500 mt-2 font-medium">{subtitle}</p>}
     </div>
   </motion.div>
 );
@@ -46,10 +46,10 @@ export default function Dashboard() {
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10"
       >
         <div>
-          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Welcome back, {user?.fullName || 'Athlete'}</h1>
-          <p className="text-slate-500 text-base">Here is your daily fitness summary.</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-2">Welcome back, {user?.fullName || 'Athlete'}</h1>
+          <p className="text-surface-500 text-base">Here is your daily fitness summary.</p>
         </div>
-        <button className="px-6 py-2.5 bg-white/50 hover:bg-slate-700 rounded-xl transition-all font-medium border border-slate-200 text-sm shadow-sm flex items-center gap-2 text-slate-800">
+        <button className="px-6 py-2.5 bg-surface-100/50 hover:bg-slate-700 rounded-xl transition-all font-medium border border-surface-200 text-sm shadow-sm flex items-center gap-2 text-surface-800">
           This Week <ChevronDown size={16} />
         </button>
       </motion.div>
@@ -80,13 +80,13 @@ export default function Dashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="lg:col-span-2 card p-6 bg-white border border-slate-100 backdrop-blur-md"
+          className="lg:col-span-2 card p-6 bg-surface-100 border border-surface-200/50 backdrop-blur-md"
         >
           <div className="flex justify-between items-center mb-6">
-            <h3 className="font-bold text-xl text-slate-800">Performance Overview</h3>
+            <h3 className="font-bold text-xl text-surface-800">Performance Overview</h3>
             <div className="flex gap-4">
-              <span className="flex items-center gap-2 text-xs text-slate-500"><div className="w-3 h-3 rounded-full bg-orange-500"></div> Calories</span>
-              <span className="flex items-center gap-2 text-xs text-slate-500"><div className="w-3 h-3 rounded-full bg-rose-500"></div> Heart Rate</span>
+              <span className="flex items-center gap-2 text-xs text-surface-500"><div className="w-3 h-3 rounded-full bg-orange-500"></div> Calories</span>
+              <span className="flex items-center gap-2 text-xs text-surface-500"><div className="w-3 h-3 rounded-full bg-rose-500"></div> Heart Rate</span>
             </div>
           </div>
           <div className="h-[300px] w-full">
@@ -128,7 +128,7 @@ export default function Dashboard() {
               <div className="p-2 bg-purple-100 rounded-lg text-purple-700">
                 <Activity size={20} />
               </div>
-              <h3 className="font-bold text-lg text-slate-800">AI Coach Insight</h3>
+              <h3 className="font-bold text-lg text-surface-800">AI Coach Insight</h3>
             </div>
             <p className="text-sm text-slate-700 leading-relaxed mb-4">
               Your recovery score is optimal today. I recommend taking on the <span className="font-bold text-purple-700">Advanced HIIT Cardio</span> session to maximize fat burn.
@@ -143,11 +143,11 @@ export default function Dashboard() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7 }}
-            className="card p-6 bg-white border border-slate-100 backdrop-blur-md"
+            className="card p-6 bg-surface-100 border border-surface-200/50 backdrop-blur-md"
           >
             <div className="flex items-center gap-3 mb-6">
               <Trophy size={20} className="text-yellow-500" />
-              <h3 className="font-bold text-lg text-slate-800">Global Leaderboard</h3>
+              <h3 className="font-bold text-lg text-surface-800">Global Leaderboard</h3>
             </div>
             <div className="space-y-4">
               {[
@@ -155,10 +155,10 @@ export default function Dashboard() {
                 { rank: 2, name: 'Sarah Miller', pts: '11,200' },
                 { rank: 3, name: user?.fullName || 'You', pts: '10,850', isUser: true },
               ].map((p, i) => (
-                <div key={i} className={`flex items-center justify-between p-3 rounded-xl border ${p.isUser ? 'bg-blue-50 border-blue-100' : 'bg-slate-50 border-slate-100'}`}>
+                <div key={i} className={`flex items-center justify-between p-3 rounded-xl border ${p.isUser ? 'bg-blue-50 border-blue-100' : 'bg-surface-50 border-surface-200/50'}`}>
                   <div className="flex items-center gap-3">
-                    <span className={`font-bold ${p.rank === 1 ? 'text-yellow-500' : p.rank === 2 ? 'text-slate-500' : 'text-orange-400'}`}>#{p.rank}</span>
-                    <span className="text-sm text-slate-800 font-medium">{p.name}</span>
+                    <span className={`font-bold ${p.rank === 1 ? 'text-yellow-500' : p.rank === 2 ? 'text-surface-500' : 'text-orange-400'}`}>#{p.rank}</span>
+                    <span className="text-sm text-surface-800 font-medium">{p.name}</span>
                   </div>
                   <span className="text-xs text-blue-600 font-bold">{p.pts} pts</span>
                 </div>

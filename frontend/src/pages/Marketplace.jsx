@@ -28,23 +28,23 @@ export default function Marketplace() {
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-4"
+        className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4"
       >
         <div>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-accent font-bold mb-2 border border-accent/20 text-xs uppercase tracking-wider">
             <ShoppingBag size={14} /> Official Store
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight mb-2">Marketplace</h1>
-          <p className="text-slate-500">Shop premium supplements, gear, and exclusive digital plans from top trainers.</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-surface-800 tracking-tight mb-2">Marketplace</h1>
+          <p className="text-surface-500">Shop premium supplements, gear, and exclusive digital plans from top trainers.</p>
         </div>
         
         <div className="flex gap-3">
-          <button className="bg-slate-900/60 hover:bg-slate-800 text-slate-800 px-4 py-2 rounded-xl text-sm font-bold transition-colors border border-slate-200 flex items-center gap-2">
+          <button className="bg-slate-900/60 hover:bg-slate-800 text-surface-800 px-4 py-2 rounded-xl text-sm font-bold transition-colors border border-surface-200 flex items-center gap-2">
             <Tag size={16} /> Wishlist
           </button>
           <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2 text-sm font-bold relative">
             <ShoppingCart size={18} /> Cart
-            <span className="absolute -top-2 -right-2 bg-red-500 text-slate-800 text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-slate-900 font-bold">2</span>
+            <span className="absolute -top-2 -right-2 bg-red-500 text-surface-800 text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-slate-900 font-bold">2</span>
           </button>
         </div>
       </motion.div>
@@ -54,16 +54,16 @@ export default function Marketplace() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="w-full h-64 md:h-80 rounded-3xl mb-10 relative overflow-hidden bg-white border border-slate-100 flex items-center"
+        className="w-full h-64 md:h-80 rounded-3xl mb-10 relative overflow-hidden bg-surface-100 border border-surface-200/50 flex items-center"
       >
         <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="Featured" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-r from-white via-slate-900/80 to-transparent"></div>
         
         <div className="relative z-10 px-8 md:px-12 max-w-2xl">
-          <span className="px-3 py-1 bg-red-500 text-slate-800 text-xs font-bold rounded-lg mb-4 inline-block uppercase tracking-wider">Limited Time Offer</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Summer Shred Digital Bundle</h2>
-          <p className="text-slate-600 mb-6">Get 3 premium workout plans and 1 custom nutrition guide from Head Trainer David Miller. 40% Off this week only.</p>
-          <button className="bg-white text-slate-900 hover:bg-slate-200 transition-colors font-bold py-3 px-8 rounded-xl flex items-center gap-2">
+          <span className="px-3 py-1 bg-red-500 text-surface-800 text-xs font-bold rounded-lg mb-4 inline-block uppercase tracking-wider">Limited Time Offer</span>
+          <h2 className="text-3xl md:font-display text-4xl md:text-5xl font-bold text-surface-900 mb-4">Summer Shred Digital Bundle</h2>
+          <p className="text-surface-600 mb-6">Get 3 premium workout plans and 1 custom nutrition guide from Head Trainer David Miller. 40% Off this week only.</p>
+          <button className="bg-surface-100 text-slate-900 hover:bg-slate-200 transition-colors font-bold py-3 px-8 rounded-xl flex items-center gap-2">
             View Bundle <ChevronRight size={18} />
           </button>
         </div>
@@ -71,12 +71,12 @@ export default function Marketplace() {
 
       {/* Toolbar */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-        <div className="flex bg-slate-900/60 p-1.5 rounded-2xl border border-slate-100 overflow-x-auto w-full md:w-auto scrollbar-hide">
+        <div className="flex bg-slate-900/60 p-1.5 rounded-2xl border border-surface-200/50 overflow-x-auto w-full md:w-auto scrollbar-hide">
           {categories.map(cat => (
             <button 
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-xl font-bold text-sm whitespace-nowrap transition-all ${activeCategory === cat ? 'bg-accent text-slate-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-slate-400 hover:text-white'}`}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm whitespace-nowrap transition-all ${activeCategory === cat ? 'bg-accent text-surface-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-surface-400 hover:text-white'}`}
             >
               {cat}
             </button>
@@ -84,11 +84,11 @@ export default function Marketplace() {
         </div>
         
         <div className="relative w-full md:w-72">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-surface-500" size={18} />
           <input 
             type="text" 
             placeholder="Search products..." 
-            className="w-full bg-slate-900/60 border border-slate-200 rounded-xl pl-12 pr-4 py-3 text-slate-800 outline-none focus:border-accent transition-colors text-sm"
+            className="w-full bg-slate-900/60 border border-surface-200 rounded-xl pl-12 pr-4 py-3 text-surface-800 outline-none focus:border-accent transition-colors text-sm"
           />
         </div>
       </div>
@@ -105,32 +105,32 @@ export default function Marketplace() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.2 }}
             key={product.id}
-            className="card bg-slate-900/60 border border-slate-100 overflow-hidden flex flex-col group"
+            className="card bg-slate-900/60 border border-surface-200/50 overflow-hidden flex flex-col group"
           >
             <div className="h-48 relative overflow-hidden bg-[#EEF4FF]">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
               
               {product.badge && (
-                <div className="absolute top-4 left-4 bg-accent text-slate-800 text-xs font-bold px-3 py-1 rounded-lg shadow-lg shadow-blue-900/5">
+                <div className="absolute top-4 left-4 bg-accent text-surface-800 text-xs font-bold px-3 py-1 rounded-lg shadow-lg shadow-blue-900/5">
                   {product.badge}
                 </div>
               )}
               
-              <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-slate-200">
+              <div className="absolute top-4 right-4 bg-surface-100/80 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-surface-200">
                 <Star size={12} className="text-yellow-400 fill-yellow-400" />
-                <span className="text-slate-800 text-xs font-bold">{product.rating}</span>
-                <span className="text-slate-500 text-[10px]">({product.reviews})</span>
+                <span className="text-surface-800 text-xs font-bold">{product.rating}</span>
+                <span className="text-surface-500 text-[10px]">({product.reviews})</span>
               </div>
             </div>
 
             <div className="p-5 flex-1 flex flex-col">
               <span className="text-accent text-xs font-bold uppercase tracking-wider mb-2">{product.category}</span>
-              <h3 className="text-lg font-bold text-slate-800 mb-4 line-clamp-2 leading-tight">{product.name}</h3>
+              <h3 className="font-display text-lg font-bold text-surface-900 mb-4 line-clamp-2 leading-tight">{product.name}</h3>
               
               <div className="mt-auto flex items-center justify-between">
-                <span className="text-2xl font-black text-slate-800">${product.price.toFixed(2)}</span>
-                <button className="bg-[#EEF4FF] hover:bg-accent text-slate-800 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all p-3 rounded-xl border border-slate-200 hover:border-accent">
+                <span className="text-2xl font-black text-surface-800">${product.price.toFixed(2)}</span>
+                <button className="bg-[#EEF4FF] hover:bg-accent text-surface-800 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all p-3 rounded-xl border border-surface-200 hover:border-accent">
                   <ShoppingCart size={18} />
                 </button>
               </div>

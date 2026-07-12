@@ -37,8 +37,8 @@ export default function AIHealthTwin() {
         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent font-bold mb-4 border border-accent/20">
           <Zap size={18} /> Neural Synchronization Active
         </span>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight mb-4">Your AI <span className="text-accent">Health Twin</span></h1>
-        <p className="text-slate-500 max-w-2xl mx-auto">A predictive digital representation of your body based on historical workout, diet, and biometric data.</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-surface-800 tracking-tight mb-4">Your AI <span className="text-accent">Health Twin</span></h1>
+        <p className="text-surface-500 max-w-2xl mx-auto">A predictive digital representation of your body based on historical workout, diet, and biometric data.</p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -48,7 +48,7 @@ export default function AIHealthTwin() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
-          className="lg:col-span-4 flex flex-col items-center justify-center card p-8 bg-slate-900/40 border border-slate-100 relative overflow-hidden"
+          className="lg:col-span-4 flex flex-col items-center justify-center card p-8 bg-slate-900/40 border border-surface-200/50 relative overflow-hidden"
         >
           {/* Scanning Line Animation */}
           <motion.div 
@@ -57,9 +57,9 @@ export default function AIHealthTwin() {
             className="absolute left-0 right-0 h-1 bg-accent/50 shadow-[0_0_20px_rgba(59,130,246,0.8)] z-10"
           />
 
-          <h3 className="text-lg font-bold text-slate-800 self-start w-full mb-6">Biometric Map</h3>
+          <h3 className="font-display text-lg font-bold text-surface-900 self-start w-full mb-6">Biometric Map</h3>
           
-          <div className="relative w-64 h-96 mx-auto bg-[url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-b5ef050c2e1e?q=80&w=400&auto=format&fit=crop')] bg-cover bg-center rounded-3xl opacity-50 border border-slate-200 shadow-xl shadow-blue-900/5">
+          <div className="relative w-64 h-96 mx-auto bg-[url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-b5ef050c2e1e?q=80&w=400&auto=format&fit=crop')] bg-cover bg-center rounded-3xl opacity-50 border border-surface-200 shadow-xl shadow-blue-900/5">
              <div className="absolute inset-0 bg-gradient-to-t from-white via-slate-900/50 to-transparent"></div>
              
              {/* Data Nodes on Body */}
@@ -72,7 +72,7 @@ export default function AIHealthTwin() {
             <p className="text-sm text-accent font-semibold flex items-center gap-2 mb-1">
               <Zap size={16} /> AI Prediction
             </p>
-            <p className="text-sm text-slate-600">Based on your current trajectory, you will reach your target body fat (14%) in approximately 4.2 weeks.</p>
+            <p className="text-sm text-surface-600">Based on your current trajectory, you will reach your target body fat (14%) in approximately 4.2 weeks.</p>
           </div>
         </motion.div>
 
@@ -95,8 +95,8 @@ export default function AIHealthTwin() {
                 <div className={`w-10 h-10 rounded-lg ${metric.bg} flex items-center justify-center mb-3`}>
                   <metric.icon size={20} className={metric.color} />
                 </div>
-                <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">{metric.label}</p>
-                <h4 className="text-xl font-bold text-slate-800">{metric.value}</h4>
+                <p className="text-xs text-surface-500 font-medium uppercase tracking-wider mb-1">{metric.label}</p>
+                <h4 className="font-display text-xl font-bold text-surface-900">{metric.value}</h4>
               </div>
             ))}
           </motion.div>
@@ -106,10 +106,10 @@ export default function AIHealthTwin() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="card p-6 bg-slate-900/60 border border-slate-100"
+            className="card p-6 bg-slate-900/60 border border-surface-200/50"
           >
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-lg font-bold text-slate-800 capitalize">{activeMetric} History (6 Months)</h3>
+              <h3 className="font-display text-lg font-bold text-surface-900 capitalize">{activeMetric} History (6 Months)</h3>
               <button className="text-sm font-semibold text-accent hover:text-white transition-colors">Download Report</button>
             </div>
             

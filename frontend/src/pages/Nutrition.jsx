@@ -24,19 +24,19 @@ export default function Nutrition() {
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10"
       >
         <div>
-          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Nutrition Center</h1>
-          <p className="text-slate-500">Discover macronutrients, build meal plans, and track your intake.</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-2">Nutrition Center</h1>
+          <p className="text-surface-500">Discover macronutrients, build meal plans, and track your intake.</p>
         </div>
 
         <div className="flex gap-4 w-full md:w-auto">
           <div className="relative flex-1 md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-surface-500" size={18} />
             <input 
               type="text" 
               placeholder="Search foods..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white/50 border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 text-slate-800 focus:outline-none focus:border-accent transition-colors"
+              className="w-full bg-surface-100/50 border border-surface-200 rounded-xl py-2.5 pl-10 pr-4 text-surface-800 focus:outline-none focus:border-accent transition-colors"
             />
           </div>
           <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2">
@@ -56,10 +56,10 @@ export default function Nutrition() {
           <Activity className="text-accent" size={32} />
         </div>
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-slate-800 mb-2">AI Diet Insight</h3>
-          <p className="text-slate-600">Based on your recent heavy workouts, you are slightly under your protein goal. Consider adding a serving of <span className="text-accent font-semibold">Chicken Breast</span> or <span className="text-accent font-semibold">Greek Yogurt</span> to your dinner.</p>
+          <h3 className="font-display text-xl font-bold text-surface-900 mb-2">AI Diet Insight</h3>
+          <p className="text-surface-600">Based on your recent heavy workouts, you are slightly under your protein goal. Consider adding a serving of <span className="text-accent font-semibold">Chicken Breast</span> or <span className="text-accent font-semibold">Greek Yogurt</span> to your dinner.</p>
         </div>
-        <button className="px-6 py-3 bg-white/10 hover:bg-white/20 text-slate-800 rounded-xl font-medium transition-colors border border-slate-200 backdrop-blur-md whitespace-nowrap">
+        <button className="px-6 py-3 bg-surface-100/10 hover:bg-surface-100/20 text-surface-800 rounded-xl font-medium transition-colors border border-surface-200 backdrop-blur-md whitespace-nowrap">
           Generate Full Diet
         </button>
       </motion.div>
@@ -73,7 +73,7 @@ export default function Nutrition() {
             className={`px-6 py-2.5 rounded-full font-medium whitespace-nowrap transition-all duration-300 border ${
               activeCategory === cat 
                 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-600/20' 
-                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-blue-600'
+                : 'bg-surface-100 border-surface-200 text-surface-600 hover:bg-surface-50 hover:text-blue-600'
             }`}
           >
             {cat}
@@ -92,11 +92,11 @@ export default function Nutrition() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               key={food.id}
-              className="card overflow-hidden group border border-slate-100 bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all"
+              className="card-interactive overflow-hidden group border border-surface-200/50 bg-surface-100"
             >
               <div className="h-48 overflow-hidden relative">
                 <img src={food.image} alt={food.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-                <div className="absolute top-3 right-3 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-800 border border-slate-200 shadow-sm">
+                <div className="absolute top-3 right-3 px-3 py-1 bg-surface-100/90 backdrop-blur-md rounded-full text-xs font-bold text-surface-800 border border-surface-200 shadow-sm">
                   {food.serving}
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Nutrition() {
               <div className="p-5">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-1">{food.name}</h3>
+                    <h3 className="font-display text-xl font-bold text-surface-900 mb-1">{food.name}</h3>
                     <p className="text-xs text-accent font-medium">{food.category}</p>
                   </div>
                   <div className="flex items-center gap-1 text-orange-400 font-bold bg-orange-400/10 px-2 py-1 rounded-lg text-sm">
@@ -113,26 +113,26 @@ export default function Nutrition() {
                 </div>
 
                 <div className="grid grid-cols-3 gap-2 mb-4">
-                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-slate-100">
-                    <p className="text-xs text-slate-500 mb-1">PRO</p>
-                    <p className="text-sm font-bold text-slate-800">{food.protein}g</p>
+                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-surface-200/50">
+                    <p className="text-xs text-surface-500 mb-1">PRO</p>
+                    <p className="text-sm font-bold text-surface-800">{food.protein}g</p>
                   </div>
-                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-slate-100">
-                    <p className="text-xs text-slate-500 mb-1">CARB</p>
-                    <p className="text-sm font-bold text-slate-800">{food.carbs}g</p>
+                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-surface-200/50">
+                    <p className="text-xs text-surface-500 mb-1">CARB</p>
+                    <p className="text-sm font-bold text-surface-800">{food.carbs}g</p>
                   </div>
-                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-slate-100">
-                    <p className="text-xs text-slate-500 mb-1">FAT</p>
-                    <p className="text-sm font-bold text-slate-800">{food.fat}g</p>
+                  <div className="bg-[#EEF4FF] rounded-lg p-2 text-center border border-surface-200/50">
+                    <p className="text-xs text-surface-500 mb-1">FAT</p>
+                    <p className="text-sm font-bold text-surface-800">{food.fat}g</p>
                   </div>
                 </div>
 
-                <div className="flex items-center text-slate-500 text-xs mb-5 line-clamp-1">
+                <div className="flex items-center text-surface-500 text-xs mb-5 line-clamp-1">
                   <Apple size={14} className="mr-1 shrink-0 text-green-400" /> 
                   <span className="truncate">{food.vitamins.join(', ')}</span>
                 </div>
 
-                <button className="w-full py-2.5 bg-white/5 hover:bg-accent hover:text-white text-slate-600 rounded-xl text-sm font-semibold transition-all border border-slate-200 group-hover:border-transparent flex items-center justify-center gap-2">
+                <button className="w-full py-2.5 bg-surface-100/5 hover:bg-accent hover:text-white text-surface-600 rounded-xl text-sm font-semibold transition-all border border-surface-200 group-hover:border-transparent flex items-center justify-center gap-2">
                   View Details <ChevronRight size={16} />
                 </button>
               </div>
@@ -142,7 +142,7 @@ export default function Nutrition() {
         
         {filteredData.length === 0 && (
           <div className="col-span-full py-20 text-center">
-            <p className="text-slate-500 text-lg">No foods found matching "{searchQuery}" in this category.</p>
+            <p className="text-surface-500 text-lg">No foods found matching "{searchQuery}" in this category.</p>
           </div>
         )}
       </div>

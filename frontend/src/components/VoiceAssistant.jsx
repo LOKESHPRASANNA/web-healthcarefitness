@@ -128,12 +128,12 @@ export default function VoiceAssistant() {
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             className="fixed bottom-24 right-8 z-50 w-80 glass-panel p-6 border border-accent/30 shadow-[0_0_30px_rgba(59,130,246,0.15)] rounded-2xl flex flex-col items-center text-center"
           >
-            <button onClick={() => setShowHUD(false)} className="absolute top-3 right-3 text-slate-500 hover:text-white">
+            <button onClick={() => setShowHUD(false)} className="absolute top-3 right-3 text-surface-500 hover:text-white">
               <X size={16} />
             </button>
             
             <div className="relative mb-4">
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center bg-white border-2 ${isListening ? 'border-accent shadow-[0_0_20px_rgba(59,130,246,0.5)]' : 'border-slate-700'}`}>
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center bg-surface-100 border-2 ${isListening ? 'border-accent shadow-[0_0_20px_rgba(59,130,246,0.5)]' : 'border-slate-700'}`}>
                 {isListening ? (
                   <Mic size={24} className="text-accent animate-pulse" />
                 ) : (
@@ -151,10 +151,10 @@ export default function VoiceAssistant() {
             
             <div className="h-16 flex flex-col justify-center">
               {isListening ? (
-                <p className="text-slate-800 font-semibold">Listening...</p>
+                <p className="text-surface-800 font-semibold">Listening...</p>
               ) : (
                 <>
-                  <p className="text-slate-500 text-sm italic mb-2">"{transcript}"</p>
+                  <p className="text-surface-500 text-sm italic mb-2">"{transcript}"</p>
                   <p className="text-accent font-bold text-sm">{assistantResponse}</p>
                 </>
               )}
@@ -170,8 +170,8 @@ export default function VoiceAssistant() {
         onClick={toggleListening}
         className={`fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-blue-900/5 transition-colors ${
           isListening 
-            ? 'bg-red-500 hover:bg-red-600 text-slate-800 shadow-[0_0_20px_rgba(239,68,68,0.4)]' 
-            : 'bg-accent hover:bg-blue-600 text-slate-800 shadow-[0_0_20px_rgba(59,130,246,0.4)]'
+            ? 'bg-red-500 hover:bg-red-600 text-surface-800 shadow-[0_0_20px_rgba(239,68,68,0.4)]' 
+            : 'bg-accent hover:bg-blue-600 text-surface-800 shadow-[0_0_20px_rgba(59,130,246,0.4)]'
         }`}
       >
         {isListening ? <MicOff size={24} /> : <Mic size={24} />}

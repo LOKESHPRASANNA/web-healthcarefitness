@@ -27,19 +27,19 @@ export default function Workouts() {
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8"
       >
         <div>
-          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Workout Center</h1>
-          <p className="text-slate-500">100+ precision-engineered exercises for maximum results.</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-2">Workout Center</h1>
+          <p className="text-surface-500">100+ precision-engineered exercises for maximum results.</p>
         </div>
 
         <div className="flex gap-4 w-full md:w-auto">
           <div className="relative flex-1 md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-surface-500" size={18} />
             <input 
               type="text" 
               placeholder="Search exercises..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white/50 border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 text-slate-800 focus:outline-none focus:border-accent transition-colors"
+              className="w-full bg-surface-100/50 border border-surface-200 rounded-xl py-2.5 pl-10 pr-4 text-surface-800 focus:outline-none focus:border-accent transition-colors"
             />
           </div>
           <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2 whitespace-nowrap">
@@ -51,7 +51,7 @@ export default function Workouts() {
       {/* Filters */}
       <div className="flex flex-col md:flex-row gap-6 mb-8">
         <div className="flex-1">
-          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Muscle Group</p>
+          <p className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-3">Muscle Group</p>
           <div className="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
             {categories.map(cat => (
               <button
@@ -60,7 +60,7 @@ export default function Workouts() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all border ${
                   activeCategory === cat 
                     ? 'bg-accent border-accent text-white' 
-                    : 'bg-slate-800/30 border-slate-100 text-slate-500 hover:bg-slate-700/50'
+                    : 'bg-slate-800/30 border-surface-200/50 text-surface-500 hover:bg-slate-700/50'
                 }`}
               >
                 {cat}
@@ -70,16 +70,16 @@ export default function Workouts() {
         </div>
         
         <div className="md:w-64 shrink-0">
-          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Difficulty</p>
-          <div className="flex bg-white/50 p-1 rounded-xl border border-slate-100">
+          <p className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-3">Difficulty</p>
+          <div className="flex bg-surface-100/50 p-1 rounded-xl border border-surface-200/50">
             {difficulties.slice(1).map(diff => (
               <button
                 key={diff}
                 onClick={() => setActiveDifficulty(activeDifficulty === diff ? 'All' : diff)}
                 className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${
                   activeDifficulty === diff
-                    ? 'bg-white/10 text-slate-800 shadow-sm'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-surface-100/10 text-surface-800 shadow-sm'
+                    : 'text-surface-500 hover:text-slate-300'
                 }`}
               >
                 {diff}
@@ -100,51 +100,51 @@ export default function Workouts() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               key={workout.id}
-              className="card overflow-hidden group border border-slate-100 bg-slate-900/60 hover:bg-slate-800/80 transition-all hover:border-accent/30 flex flex-col"
+              className="card overflow-hidden group border border-surface-200/50 bg-slate-900/60 hover:bg-slate-800/80 transition-all hover:border-accent/30 flex flex-col"
             >
               <div className="h-48 overflow-hidden relative shrink-0">
                 <img src={workout.image} alt={workout.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 flex gap-2">
-                  <span className={`px-2 py-1 rounded md backdrop-blur-md text-xs font-bold text-slate-800 border border-slate-200 ${
+                  <span className={`px-2 py-1 rounded md backdrop-blur-md text-xs font-bold text-surface-800 border border-surface-200 ${
                     workout.difficulty === 'Beginner' ? 'bg-green-500/40' :
                     workout.difficulty === 'Intermediate' ? 'bg-orange-500/40' : 'bg-red-500/40'
                   }`}>
                     {workout.difficulty}
                   </span>
-                  <span className="px-2 py-1 rounded md bg-black/40 backdrop-blur-md text-xs font-bold text-slate-800 border border-slate-200">
+                  <span className="px-2 py-1 rounded md bg-black/40 backdrop-blur-md text-xs font-bold text-surface-800 border border-surface-200">
                     {workout.category}
                   </span>
                 </div>
-                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent/90 text-slate-800 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100 shadow-xl shadow-accent/40">
+                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-accent/90 text-surface-800 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100 shadow-xl shadow-accent/40">
                   <PlayCircle size={24} />
                 </button>
               </div>
               
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="text-lg font-bold text-slate-800 mb-2 line-clamp-1">{workout.name}</h3>
+                <h3 className="font-display text-lg font-bold text-surface-900 mb-2 line-clamp-1">{workout.name}</h3>
                 
-                <div className="flex items-center gap-4 text-xs font-medium text-slate-500 mb-4">
+                <div className="flex items-center gap-4 text-xs font-medium text-surface-500 mb-4">
                   <span className="flex items-center gap-1"><Flame size={14} className="text-orange-400"/> {workout.calories} kcal</span>
                   <span className="flex items-center gap-1"><Timer size={14} className="text-cyan-400"/> {workout.duration}</span>
                 </div>
 
-                <div className="bg-white/50 rounded-xl p-3 border border-slate-100 mb-4 mt-auto">
+                <div className="bg-surface-100/50 rounded-xl p-3 border border-surface-200/50 mb-4 mt-auto">
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-500">Sets</span>
-                    <span className="text-slate-800 font-bold">{workout.sets}</span>
+                    <span className="text-surface-500">Sets</span>
+                    <span className="text-surface-800 font-bold">{workout.sets}</span>
                   </div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-500">Reps</span>
-                    <span className="text-slate-800 font-bold">{workout.reps}</span>
+                    <span className="text-surface-500">Reps</span>
+                    <span className="text-surface-800 font-bold">{workout.reps}</span>
                   </div>
                   <div className="flex justify-between text-xs">
-                    <span className="text-slate-500">Rest</span>
-                    <span className="text-slate-800 font-bold">{workout.rest}</span>
+                    <span className="text-surface-500">Rest</span>
+                    <span className="text-surface-800 font-bold">{workout.rest}</span>
                   </div>
                 </div>
 
-                <button className="w-full py-2 bg-white/5 hover:bg-white/10 text-slate-800 rounded-lg text-sm font-semibold transition-all border border-slate-200 flex items-center justify-center gap-2">
+                <button className="w-full py-2 bg-surface-100/5 hover:bg-surface-100/10 text-surface-800 rounded-lg text-sm font-semibold transition-all border border-surface-200 flex items-center justify-center gap-2">
                   Start Exercise <ArrowRight size={16} />
                 </button>
               </div>
@@ -154,7 +154,7 @@ export default function Workouts() {
         
         {filteredWorkouts.length === 0 && (
           <div className="col-span-full py-20 text-center">
-            <p className="text-slate-500 text-lg">No exercises found matching your criteria.</p>
+            <p className="text-surface-500 text-lg">No exercises found matching your criteria.</p>
           </div>
         )}
       </div>

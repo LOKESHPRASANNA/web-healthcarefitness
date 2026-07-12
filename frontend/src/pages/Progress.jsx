@@ -36,8 +36,8 @@ export default function Progress() {
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10"
       >
         <div>
-          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Body Tracker</h1>
-          <p className="text-slate-500">Track your transformation, measurements, and body composition over time.</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-2">Body Tracker</h1>
+          <p className="text-surface-500">Track your transformation, measurements, and body composition over time.</p>
         </div>
         <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2">
           <Camera size={18} /> Add Progress Photo
@@ -52,7 +52,7 @@ export default function Progress() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
             key={m.label}
-            className="card p-6 bg-slate-900/60 border border-slate-100 backdrop-blur-md"
+            className="card p-6 bg-slate-900/60 border border-surface-200/50 backdrop-blur-md"
           >
             <div className="flex justify-between items-start mb-4">
               <div className={`p-3 rounded-2xl ${m.bg} ${m.color}`}>
@@ -63,8 +63,8 @@ export default function Progress() {
                 {m.change}
               </div>
             </div>
-            <p className="text-slate-500 text-sm font-medium mb-1">{m.label}</p>
-            <h3 className="text-3xl font-bold text-slate-800 tracking-tight">{m.value}</h3>
+            <p className="text-surface-500 text-sm font-medium mb-1">{m.label}</p>
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-surface-900 tracking-tight">{m.value}</h3>
           </motion.div>
         ))}
       </div>
@@ -75,11 +75,11 @@ export default function Progress() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="lg:col-span-2 card p-6 bg-slate-900/60 border border-slate-100 backdrop-blur-md flex flex-col"
+          className="lg:col-span-2 card p-6 bg-slate-900/60 border border-surface-200/50 backdrop-blur-md flex flex-col"
         >
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl font-bold text-slate-800">Weight & Fat % Trend</h3>
-            <select className="bg-[#EEF4FF] text-slate-600 text-sm rounded-lg px-3 py-1.5 border border-slate-200 outline-none">
+            <h3 className="font-display text-xl font-bold text-surface-900">Weight & Fat % Trend</h3>
+            <select className="bg-[#EEF4FF] text-surface-600 text-sm rounded-lg px-3 py-1.5 border border-surface-200 outline-none">
               <option>Last 6 Months</option>
               <option>This Year</option>
               <option>All Time</option>
@@ -118,18 +118,18 @@ export default function Progress() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
-          className="card p-6 bg-slate-900/60 border border-slate-100 backdrop-blur-md"
+          className="card p-6 bg-slate-900/60 border border-surface-200/50 backdrop-blur-md"
         >
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl font-bold text-slate-800">Measurements</h3>
+            <h3 className="font-display text-xl font-bold text-surface-900">Measurements</h3>
             <button className="text-accent text-sm font-semibold hover:underline">Update</button>
           </div>
           <div className="space-y-4">
             {bodyMeasurements.map((item, idx) => (
-              <div key={idx} className="bg-white/50 rounded-xl p-4 border border-slate-100 flex items-center justify-between">
+              <div key={idx} className="bg-surface-100/50 rounded-xl p-4 border border-surface-200/50 flex items-center justify-between">
                 <div>
-                  <p className="text-slate-800 font-bold mb-1">{item.part}</p>
-                  <p className="text-xs text-slate-500">Start: {item.start}</p>
+                  <p className="text-surface-800 font-bold mb-1">{item.part}</p>
+                  <p className="text-xs text-surface-500">Start: {item.start}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-accent font-bold text-lg">{item.current}</p>
@@ -147,7 +147,7 @@ export default function Progress() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <h3 className="text-2xl font-bold text-slate-800 mb-6">Transformation Journey</h3>
+        <h3 className="text-2xl font-bold text-surface-800 mb-6">Transformation Journey</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { date: 'Jan 1', label: 'Day 1', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=400&auto=format&fit=crop' },
@@ -155,12 +155,12 @@ export default function Progress() {
             { date: 'May 1', label: 'Month 5', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-14e5300c3a48?q=80&w=400&auto=format&fit=crop' },
             { date: 'Jun 1', label: 'Current', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop' }
           ].map((photo, i) => (
-            <div key={i} className="card p-2 bg-slate-900/40 border border-slate-200 group cursor-pointer">
+            <div key={i} className="card p-2 bg-slate-900/40 border border-surface-200 group cursor-pointer">
               <div className="relative rounded-xl overflow-hidden aspect-[3/4]">
                 <img src={photo.img} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-slate-800 font-bold text-sm">{photo.label}</p>
-                  <p className="text-xs text-slate-600">{photo.date}</p>
+                  <p className="text-surface-800 font-bold text-sm">{photo.label}</p>
+                  <p className="text-xs text-surface-600">{photo.date}</p>
                 </div>
               </div>
             </div>

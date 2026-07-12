@@ -71,8 +71,8 @@ export default function Membership() {
         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/20 text-yellow-500 font-bold mb-4">
           <Crown size={18} /> Premium Memberships
         </span>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight mb-4">Choose Your <span className="text-yellow-500">Tier</span></h1>
-        <p className="text-slate-500 max-w-2xl mx-auto">Upgrade your fitness journey with access to advanced AI coaching, premium facilities, and dedicated personal trainers.</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-surface-800 tracking-tight mb-4">Choose Your <span className="text-yellow-500">Tier</span></h1>
+        <p className="text-surface-500 max-w-2xl mx-auto">Upgrade your fitness journey with access to advanced AI coaching, premium facilities, and dedicated personal trainers.</p>
       </motion.div>
 
       {/* Pricing Cards */}
@@ -83,26 +83,26 @@ export default function Membership() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className={`card relative overflow-hidden bg-white/80 backdrop-blur-xl border ${plan.border} flex flex-col p-8 transition-transform hover:-translate-y-2`}
+            className={`card relative overflow-hidden bg-surface-100/80 backdrop-blur-xl border ${plan.border} flex flex-col p-8 transition-transform hover:-translate-y-2`}
           >
             {plan.isPopular && (
               <div className="absolute top-0 inset-x-0 h-1 bg-accent"></div>
             )}
             
             <h3 className={`text-2xl font-bold mb-2 ${plan.color}`}>{plan.name}</h3>
-            <p className="text-slate-500 text-sm mb-6 h-10">{plan.desc}</p>
+            <p className="text-surface-500 text-sm mb-6 h-10">{plan.desc}</p>
             
             <div className="flex items-end gap-1 mb-8">
-              <span className="text-5xl font-bold text-slate-800 tracking-tight">{plan.price}</span>
-              <span className="text-slate-500 font-medium mb-1">{plan.period}</span>
+              <span className="text-5xl font-bold text-surface-800 tracking-tight">{plan.price}</span>
+              <span className="text-surface-500 font-medium mb-1">{plan.period}</span>
             </div>
 
             <button className={`w-full py-4 rounded-xl font-bold transition-all mb-8 shadow-lg shadow-blue-900/5 ${
               plan.isPopular 
-                ? 'bg-accent text-slate-800 hover:bg-accent-dark shadow-accent/25' 
+                ? 'bg-accent text-surface-800 hover:bg-accent-dark shadow-accent/25' 
                 : plan.name === 'Elite' 
                   ? 'bg-yellow-500 text-black hover:bg-yellow-400 shadow-yellow-500/25'
-                  : 'bg-slate-800 text-slate-800 hover:bg-slate-700 border border-white/5'
+                  : 'bg-slate-800 text-surface-800 hover:bg-slate-700 border border-white/5'
             }`}>
               Select {plan.name}
             </button>
@@ -116,10 +116,10 @@ export default function Membership() {
                     </div>
                   ) : (
                     <div className="w-5 h-5 rounded-full bg-[#EEF4FF] flex items-center justify-center shrink-0">
-                      <X size={12} className="text-slate-500" />
+                      <X size={12} className="text-surface-500" />
                     </div>
                   )}
-                  <span className={feature.included ? 'text-slate-300 text-sm font-medium' : 'text-slate-600 text-sm'}>
+                  <span className={feature.included ? 'text-slate-300 text-sm font-medium' : 'text-surface-600 text-sm'}>
                     {feature.name}
                   </span>
                 </div>
@@ -134,23 +134,23 @@ export default function Membership() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.4 }}
-        className="max-w-4xl mx-auto card p-8 bg-gradient-to-r from-white to-slate-800 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6"
+        className="max-w-4xl mx-auto card p-8 bg-gradient-to-r from-white to-slate-800 border border-surface-200 flex flex-col md:flex-row items-center justify-between gap-6"
       >
         <div className="flex items-center gap-6">
           <div className="w-16 h-16 rounded-2xl bg-yellow-500/20 flex items-center justify-center shrink-0 border border-yellow-500/30">
             <Star size={32} className="text-yellow-500" />
           </div>
           <div>
-            <p className="text-slate-500 text-sm font-medium mb-1">Current Plan</p>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">Elite VIP Access</h3>
-            <p className="text-sm text-slate-600 flex items-center gap-2">
+            <p className="text-surface-500 text-sm font-medium mb-1">Current Plan</p>
+            <h3 className="text-2xl font-bold text-surface-800 mb-2">Elite VIP Access</h3>
+            <p className="text-sm text-surface-600 flex items-center gap-2">
               <Shield size={16} className="text-green-400" /> Auto-renews on Dec 15, 2026
             </p>
           </div>
         </div>
         <div className="flex gap-4">
-          <button className="px-6 py-3 rounded-xl border border-slate-200 text-slate-800 font-semibold hover:bg-white/5 transition-all">Cancel Plan</button>
-          <button className="px-6 py-3 rounded-xl bg-white text-black font-bold hover:bg-slate-200 transition-all flex items-center gap-2">
+          <button className="px-6 py-3 rounded-xl border border-surface-200 text-surface-800 font-semibold hover:bg-surface-100/5 transition-all">Cancel Plan</button>
+          <button className="px-6 py-3 rounded-xl bg-surface-100 text-black font-bold hover:bg-slate-200 transition-all flex items-center gap-2">
             <Zap size={18} /> Upgrade Add-ons
           </button>
         </div>

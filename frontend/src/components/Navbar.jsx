@@ -38,7 +38,7 @@ export default function Navbar() {
               </button>
             </div>
           ) : (
-            <Link to="/login" className="px-5 py-2.5 bg-[#F8FAFD] dark:bg-white text-slate-800 dark:text-primary-dark rounded-full hover:scale-105 transition-transform font-semibold shadow-premium">
+            <Link to="/login" className="px-5 py-2.5 bg-[#F8FAFD] dark:bg-surface-100 text-surface-800 dark:text-primary-dark rounded-full hover:scale-105 transition-transform font-semibold shadow-premium">
               Sign In
             </Link>
           )}

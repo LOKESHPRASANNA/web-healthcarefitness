@@ -43,21 +43,23 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex">
-      {/* Left side - Image */}
-      <div className="hidden lg:flex w-1/2 relative bg-[#F8FAFD] overflow-hidden">
+    <div className="min-h-screen flex bg-surface-50">
+      {/* Left side - Full Bleed Editorial Image */}
+      <div className="hidden lg:flex w-1/2 relative bg-surface-100 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")' }}
+          className="absolute inset-0 bg-cover bg-center bg-blend-multiply"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")' }}
         >
-          <div className="absolute inset-0 bg-primary-dark/40"></div>
+          {/* Subtle warm gradient overlay to ensure text legibility while keeping image rich */}
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-900/80 via-surface-900/20 to-transparent"></div>
         </div>
-        <div className="relative z-10 p-12 flex flex-col justify-end h-full w-full">
+        
+        <div className="relative z-10 p-16 flex flex-col justify-end h-full w-full">
           <motion.blockquote 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl font-bold text-slate-800 max-w-lg leading-tight"
+            className="font-display text-4xl md:text-5xl font-bold text-white max-w-lg leading-[1.1]"
           >
             "The only bad workout is the one that didn't happen."
           </motion.blockquote>
@@ -65,7 +67,7 @@ export default function Login() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-slate-600 mt-4 text-lg"
+            className="text-surface-200 mt-6 text-lg font-medium tracking-wide"
           >
             Join millions pushing their limits daily.
           </motion.p>
@@ -73,67 +75,69 @@ export default function Login() {
       </div>
 
       {/* Right side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light ">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-full max-w-md card p-10"
+          className="w-full max-w-md"
         >
-          <h2 className="text-3xl font-bold text-primary  mb-2">Welcome Back</h2>
-          <p className="text-secondary dark:text-slate-400 mb-6">Please enter your details to sign in.</p>
+          <div className="mb-10">
+            <h2 className="font-display text-4xl font-bold text-surface-900 mb-3">Welcome Back</h2>
+            <p className="text-surface-500 text-lg">Please enter your details to sign in.</p>
+          </div>
           
           {successMessage && (
-            <div className="bg-success/10 border border-success/20 text-success px-4 py-3 rounded-xl mb-6 text-sm font-medium">
+            <div className="bg-success-light/30 border border-success/30 text-success-800 px-4 py-3 rounded-xl mb-8 text-sm font-medium">
               {successMessage}
             </div>
           )}
 
           {error && (
-            <div className="bg-danger/10 border border-danger/20 text-danger px-4 py-3 rounded-xl mb-6 text-sm">
+            <div className="bg-danger-light/30 border border-danger/30 text-danger-800 px-4 py-3 rounded-xl mb-8 text-sm font-medium">
               {error}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Email or Username</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Email or Username</label>
               <input 
                 name="usernameOrEmail"
                 value={formData.usernameOrEmail}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="Enter your email or username" 
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Password</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Password</label>
               <input 
                 name="password"
                 type="password"
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="Enter your password" 
               />
             </div>
             
-            <div className="flex justify-between items-center text-sm">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" className="rounded border-slate-300 text-accent focus:ring-accent" />
-                <span className="text-secondary dark:text-slate-300">Remember me</span>
+            <div className="flex justify-between items-center text-sm pt-2">
+              <label className="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" className="w-4 h-4 rounded border-surface-300 text-accent focus:ring-accent/20 transition-colors" />
+                <span className="text-surface-600 font-medium group-hover:text-surface-800 transition-colors">Remember me</span>
               </label>
-              <a href="#" className="text-accent hover:text-accent-dark font-medium transition-colors">Forgot password?</a>
+              <a href="#" className="text-accent hover:text-accent-dark font-semibold transition-colors">Forgot password?</a>
             </div>
 
-            <button disabled={loading} type="submit" className="w-full py-3.5 mt-2 bg-accent text-slate-800 font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-blue-900/5 hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50">
+            <button disabled={loading} type="submit" className="btn-primary w-full mt-4 text-base py-4">
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
           </form>
           
-          <p className="text-center mt-8 text-secondary dark:text-slate-400 text-sm">
-            Don't have an account? <Link to="/signup" className="text-accent hover:text-accent-dark font-semibold transition-colors">Sign up for free</Link>
+          <p className="text-center mt-10 text-surface-500 font-medium">
+            Don't have an account? <Link to="/signup" className="text-accent hover:text-accent-dark font-bold transition-colors ml-1">Sign up for free</Link>
           </p>
         </motion.div>
       </div>

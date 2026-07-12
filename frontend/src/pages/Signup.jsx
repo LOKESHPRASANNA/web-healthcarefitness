@@ -42,96 +42,100 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex bg-surface-50">
       {/* Left side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light  overflow-y-auto">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16 overflow-y-auto">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-full max-w-md card p-8 my-8"
+          className="w-full max-w-md my-8"
         >
-          <h2 className="text-3xl font-bold text-primary  mb-2">Create Account</h2>
-          <p className="text-secondary dark:text-slate-400 mb-6">Join the world's most advanced fitness platform.</p>
+          <div className="mb-10">
+            <h2 className="font-display text-4xl font-bold text-surface-900 mb-3">Create Account</h2>
+            <p className="text-surface-500 text-lg">Join the world's most advanced fitness platform.</p>
+          </div>
           
           {error && (
-            <div className="bg-danger/10 border border-danger/20 text-danger px-4 py-3 rounded-xl mb-6 text-sm">
+            <div className="bg-danger-light/30 border border-danger/30 text-danger-800 px-4 py-3 rounded-xl mb-8 text-sm font-medium">
               {error}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Full Name</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Full Name</label>
               <input 
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="John Doe" 
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Username</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Username</label>
               <input 
                 name="username"
                 value={formData.username}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="johndoe99" 
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Email</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Email</label>
               <input 
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="john@example.com" 
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-secondary dark:text-slate-300 mb-1.5">Password</label>
+              <label className="block text-sm font-semibold text-surface-700 mb-2">Password</label>
               <input 
                 name="password"
                 type="password"
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
+                className="input-base" 
                 placeholder="Create a strong password" 
               />
             </div>
 
-            <button disabled={loading} type="submit" className="w-full py-3.5 mt-4 bg-accent text-slate-800 font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-blue-900/5 hover:shadow-xl disabled:opacity-50">
+            <button disabled={loading} type="submit" className="btn-primary w-full mt-4 text-base py-4">
               {loading ? 'Creating account...' : 'Create Account'}
             </button>
           </form>
           
-          <p className="text-center mt-6 text-secondary dark:text-slate-400 text-sm">
-            Already have an account? <Link to="/login" className="text-accent hover:text-accent-dark font-semibold transition-colors">Sign in here</Link>
+          <p className="text-center mt-10 text-surface-500 font-medium">
+            Already have an account? <Link to="/login" className="text-accent hover:text-accent-dark font-bold transition-colors ml-1">Sign in here</Link>
           </p>
         </motion.div>
       </div>
 
-      {/* Right side - Image */}
-      <div className="hidden lg:flex w-1/2 relative bg-[#F8FAFD] overflow-hidden">
+      {/* Right side - Full Bleed Editorial Image */}
+      <div className="hidden lg:flex w-1/2 relative bg-surface-100 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")' }}
+          className="absolute inset-0 bg-cover bg-center bg-blend-multiply"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop")' }}
         >
-          <div className="absolute inset-0 bg-primary-dark/60"></div>
+          {/* Subtle warm gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-900/80 via-surface-900/20 to-transparent"></div>
         </div>
-        <div className="relative z-10 p-12 flex flex-col justify-end h-full w-full">
+        
+        <div className="relative z-10 p-16 flex flex-col justify-end h-full w-full">
           <motion.blockquote 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl font-bold text-slate-800 max-w-lg leading-tight"
+            className="font-display text-4xl md:text-5xl font-bold text-white max-w-lg leading-[1.1]"
           >
             "Your body can stand almost anything. It's your mind that you have to convince."
           </motion.blockquote>
@@ -139,7 +143,7 @@ export default function Signup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-slate-600 mt-4 text-lg"
+            className="text-surface-200 mt-6 text-lg font-medium tracking-wide"
           >
             Start your transformation today.
           </motion.p>

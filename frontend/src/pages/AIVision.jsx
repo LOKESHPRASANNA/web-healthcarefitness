@@ -45,22 +45,22 @@ export default function AIVision() {
         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent font-bold mb-4 border border-accent/20">
           <Scan size={18} /> Neural Vision Engine V2
         </span>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight mb-4">AI <span className="text-accent">Computer Vision</span></h1>
-        <p className="text-slate-500 max-w-2xl mx-auto">Upload a meal for instant calorie estimation, or a workout photo for real-time biomechanical posture correction.</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-surface-800 tracking-tight mb-4">AI <span className="text-accent">Computer Vision</span></h1>
+        <p className="text-surface-500 max-w-2xl mx-auto">Upload a meal for instant calorie estimation, or a workout photo for real-time biomechanical posture correction.</p>
       </motion.div>
 
       {/* Mode Tabs */}
       <div className="flex justify-center mb-8">
-        <div className="bg-slate-900/60 p-1.5 rounded-2xl border border-slate-100 flex gap-1">
+        <div className="bg-slate-900/60 p-1.5 rounded-2xl border border-surface-200/50 flex gap-1">
           <button 
             onClick={() => { setActiveTab('meal'); resetScanner(); }}
-            className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all ${activeTab === 'meal' ? 'bg-accent text-slate-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-slate-400 hover:text-white'}`}
+            className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all ${activeTab === 'meal' ? 'bg-accent text-surface-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-surface-400 hover:text-white'}`}
           >
             <Apple size={18} /> Meal Analysis
           </button>
           <button 
             onClick={() => { setActiveTab('posture'); resetScanner(); }}
-            className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all ${activeTab === 'posture' ? 'bg-accent text-slate-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-slate-400 hover:text-white'}`}
+            className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all ${activeTab === 'posture' ? 'bg-accent text-surface-800 shadow-lg shadow-blue-900/5 shadow-accent/25' : 'text-surface-400 hover:text-white'}`}
           >
             <Activity size={18} /> Posture Correction
           </button>
@@ -73,26 +73,26 @@ export default function AIVision() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="card p-2 bg-slate-900/40 border border-slate-100 relative overflow-hidden h-[500px]"
+          className="card p-2 bg-slate-900/40 border border-surface-200/50 relative overflow-hidden h-[500px]"
         >
           {!imageUploaded ? (
             // Upload UI
             <div 
-              className="w-full h-full border-2 border-dashed border-blue-100 rounded-xl bg-white/70 flex flex-col items-center justify-center cursor-pointer hover:border-accent hover:bg-slate-800 transition-colors"
+              className="w-full h-full border-2 border-dashed border-blue-100 rounded-xl bg-surface-100/70 flex flex-col items-center justify-center cursor-pointer hover:border-accent hover:bg-slate-800 transition-colors"
               onClick={handleUpload}
             >
               {isUploading ? (
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 border-4 border-blue-100 border-t-accent rounded-full animate-spin mb-4"></div>
-                  <h3 className="text-slate-800 font-bold text-lg">Uploading...</h3>
+                  <h3 className="text-surface-800 font-bold text-lg">Uploading...</h3>
                 </div>
               ) : (
                 <>
                   <div className="w-20 h-20 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-6 shadow-xl">
                     <UploadCloud size={32} className="text-accent" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-2">Drop your image here</h3>
-                  <p className="text-slate-500 text-sm mb-6 text-center max-w-xs">Supports JPG, PNG and MP4 up to 50MB. High resolution preferred.</p>
+                  <h3 className="font-display text-xl font-bold text-surface-900 mb-2">Drop your image here</h3>
+                  <p className="text-surface-500 text-sm mb-6 text-center max-w-xs">Supports JPG, PNG and MP4 up to 50MB. High resolution preferred.</p>
                   <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2">
                     <Camera size={18} /> Select File
                   </button>
@@ -105,7 +105,7 @@ export default function AIVision() {
               {/* Reset Button */}
               <button 
                 onClick={resetScanner}
-                className="absolute top-4 right-4 z-50 bg-black/50 hover:bg-red-500 text-slate-800 p-2 rounded-full backdrop-blur-md transition-colors"
+                className="absolute top-4 right-4 z-50 bg-black/50 hover:bg-red-500 text-surface-800 p-2 rounded-full backdrop-blur-md transition-colors"
               >
                 <X size={20} />
               </button>
@@ -135,7 +135,7 @@ export default function AIVision() {
                   {/* Scanning Text */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 bg-black/80 px-6 py-3 rounded-full backdrop-blur-md border border-accent/30 z-20">
                     <Scan className="text-accent animate-pulse" size={20} />
-                    <span className="text-slate-800 font-bold tracking-widest uppercase text-sm animate-pulse">Running Vision Models...</span>
+                    <span className="text-surface-800 font-bold tracking-widest uppercase text-sm animate-pulse">Running Vision Models...</span>
                   </div>
                 </>
               )}
@@ -145,7 +145,7 @@ export default function AIVision() {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
                   <div className="absolute top-[40%] left-[45%] w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-[0_0_15px_rgba(239,68,68,1)]"></div>
                   <div className="absolute top-[40%] left-[45%] w-32 h-0.5 bg-red-500 -rotate-45 origin-left"></div>
-                  <div className="absolute top-[30%] left-[65%] bg-black/80 text-slate-800 text-xs font-bold px-3 py-1 rounded-full border border-red-500 backdrop-blur-md">
+                  <div className="absolute top-[30%] left-[65%] bg-black/80 text-surface-800 text-xs font-bold px-3 py-1 rounded-full border border-red-500 backdrop-blur-md">
                     Back rounding detected
                   </div>
                 </motion.div>
@@ -155,10 +155,10 @@ export default function AIVision() {
               {scanComplete && activeTab === 'meal' && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
                   <div className="absolute top-[20%] left-[20%] w-[40%] h-[40%] border-2 border-accent border-dashed bg-accent/10 rounded-lg">
-                    <div className="absolute -top-3 -right-2 bg-accent text-slate-800 text-xs font-bold px-2 py-0.5 rounded-full shadow-lg shadow-blue-900/5">Avocado (75%)</div>
+                    <div className="absolute -top-3 -right-2 bg-accent text-surface-800 text-xs font-bold px-2 py-0.5 rounded-full shadow-lg shadow-blue-900/5">Avocado (75%)</div>
                   </div>
                   <div className="absolute bottom-[20%] right-[10%] w-[35%] h-[30%] border-2 border-green-500 border-dashed bg-green-500/10 rounded-lg">
-                    <div className="absolute -top-3 -right-2 bg-green-500 text-slate-800 text-xs font-bold px-2 py-0.5 rounded-full shadow-lg shadow-blue-900/5">Spinach (92%)</div>
+                    <div className="absolute -top-3 -right-2 bg-green-500 text-surface-800 text-xs font-bold px-2 py-0.5 rounded-full shadow-lg shadow-blue-900/5">Spinach (92%)</div>
                   </div>
                 </motion.div>
               )}
@@ -176,20 +176,20 @@ export default function AIVision() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="h-[500px] card bg-slate-900/40 border border-slate-100 flex flex-col items-center justify-center text-center p-8"
+                className="h-[500px] card bg-slate-900/40 border border-surface-200/50 flex flex-col items-center justify-center text-center p-8"
               >
-                <div className="w-20 h-20 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-6 border border-slate-100">
-                  <Activity size={32} className="text-slate-500" />
+                <div className="w-20 h-20 bg-[#EEF4FF] rounded-full flex items-center justify-center mb-6 border border-surface-200/50">
+                  <Activity size={32} className="text-surface-500" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-2">Awaiting Image</h3>
-                <p className="text-slate-500">Upload a photo to see the Neural Vision Engine in action.</p>
+                <h3 className="font-display text-xl font-bold text-surface-900 mb-2">Awaiting Image</h3>
+                <p className="text-surface-500">Upload a photo to see the Neural Vision Engine in action.</p>
               </motion.div>
             ) : (
               <motion.div 
                 key="results"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="card p-8 bg-slate-900/60 border border-slate-100 h-[500px] overflow-y-auto"
+                className="card p-8 bg-slate-900/60 border border-surface-200/50 h-[500px] overflow-y-auto"
               >
                 {activeTab === 'meal' ? (
                   // Meal Results
@@ -199,42 +199,42 @@ export default function AIVision() {
                         <CheckCircle size={24} />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-slate-800">Meal Detected</h2>
-                        <p className="text-sm text-slate-500">Estimated Confidence: 94.2%</p>
+                        <h2 className="text-2xl font-bold text-surface-800">Meal Detected</h2>
+                        <p className="text-sm text-surface-500">Estimated Confidence: 94.2%</p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 mb-8">
-                      <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
-                        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider block mb-1">Total Calories</span>
-                        <span className="text-2xl font-bold text-slate-800">425 <span className="text-sm text-slate-500 font-normal">kcal</span></span>
+                      <div className="bg-surface-100/50 p-4 rounded-xl border border-surface-200/50">
+                        <span className="text-xs text-surface-500 font-bold uppercase tracking-wider block mb-1">Total Calories</span>
+                        <span className="text-2xl font-bold text-surface-800">425 <span className="text-sm text-surface-500 font-normal">kcal</span></span>
                       </div>
-                      <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
-                        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider block mb-1">Health Score</span>
+                      <div className="bg-surface-100/50 p-4 rounded-xl border border-surface-200/50">
+                        <span className="text-xs text-surface-500 font-bold uppercase tracking-wider block mb-1">Health Score</span>
                         <span className="text-2xl font-bold text-green-400">A-</span>
                       </div>
                     </div>
 
-                    <h3 className="font-bold text-slate-800 mb-4">Macronutrient Breakdown</h3>
+                    <h3 className="font-bold text-surface-800 mb-4">Macronutrient Breakdown</h3>
                     <div className="space-y-4 mb-8">
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="text-slate-600">Protein (12g)</span>
-                          <span className="font-bold text-slate-800">25%</span>
+                          <span className="text-surface-600">Protein (12g)</span>
+                          <span className="font-bold text-surface-800">25%</span>
                         </div>
                         <div className="h-2 bg-[#EEF4FF] rounded-full overflow-hidden"><div className="h-full bg-accent w-[25%]"></div></div>
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="text-slate-600">Carbs (45g)</span>
-                          <span className="font-bold text-slate-800">50%</span>
+                          <span className="text-surface-600">Carbs (45g)</span>
+                          <span className="font-bold text-surface-800">50%</span>
                         </div>
                         <div className="h-2 bg-[#EEF4FF] rounded-full overflow-hidden"><div className="h-full bg-green-500 w-[50%]"></div></div>
                       </div>
                       <div>
                         <div className="flex justify-between text-sm mb-1">
-                          <span className="text-slate-600">Fats (18g)</span>
-                          <span className="font-bold text-slate-800">25%</span>
+                          <span className="text-surface-600">Fats (18g)</span>
+                          <span className="font-bold text-surface-800">25%</span>
                         </div>
                         <div className="h-2 bg-[#EEF4FF] rounded-full overflow-hidden"><div className="h-full bg-orange-500 w-[25%]"></div></div>
                       </div>
@@ -252,33 +252,33 @@ export default function AIVision() {
                         <AlertTriangle size={24} />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-slate-800">Correction Needed</h2>
-                        <p className="text-sm text-slate-500">Exercise: Barbell Deadlift</p>
+                        <h2 className="text-2xl font-bold text-surface-800">Correction Needed</h2>
+                        <p className="text-sm text-surface-500">Exercise: Barbell Deadlift</p>
                       </div>
                     </div>
 
                     <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl mb-6">
                       <h4 className="font-bold text-red-400 flex items-center gap-2 mb-2"><AlertTriangle size={16} /> Lumbar Spinal Flexion Detected</h4>
-                      <p className="text-sm text-slate-600">Your lower back is rounding at the start of the pull. This puts extreme shear force on the spinal discs.</p>
+                      <p className="text-sm text-surface-600">Your lower back is rounding at the start of the pull. This puts extreme shear force on the spinal discs.</p>
                     </div>
 
-                    <h3 className="font-bold text-slate-800 mb-4">AI Recommendations</h3>
+                    <h3 className="font-bold text-surface-800 mb-4">AI Recommendations</h3>
                     <ul className="space-y-3 mb-8">
                       <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-slate-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
-                        <p className="text-sm text-slate-600">Drop the weight by 15-20% until form is corrected.</p>
+                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-surface-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
+                        <p className="text-sm text-surface-600">Drop the weight by 15-20% until form is corrected.</p>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-slate-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
-                        <p className="text-sm text-slate-600"><span className="text-slate-800 font-bold">"Chest up, lats tight."</span> Squeeze your armpits like you're holding oranges before you lift.</p>
+                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-surface-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
+                        <p className="text-sm text-surface-600"><span className="text-surface-800 font-bold">"Chest up, lats tight."</span> Squeeze your armpits like you're holding oranges before you lift.</p>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-slate-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
-                        <p className="text-sm text-slate-600">Brace your core pushing outwards against your belt (or imaginary belt).</p>
+                        <div className="w-6 h-6 rounded-full bg-[#EEF4FF] text-surface-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
+                        <p className="text-sm text-surface-600">Brace your core pushing outwards against your belt (or imaginary belt).</p>
                       </li>
                     </ul>
 
-                    <button className="w-full bg-[#EEF4FF] hover:bg-slate-700 text-slate-800 transition-colors py-3 rounded-xl font-bold border border-slate-200 flex justify-center items-center gap-2">
+                    <button className="w-full bg-[#EEF4FF] hover:bg-slate-700 text-surface-800 transition-colors py-3 rounded-xl font-bold border border-surface-200 flex justify-center items-center gap-2">
                       Send to My Trainer <ChevronRight size={18} />
                     </button>
                   </>
