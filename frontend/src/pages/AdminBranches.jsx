@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Building2, MapPin, Users, Phone, Plus, Edit2, Trash2 } from 'lucide-react';
+import { Building2, MapPin, Users, Phone, Plus, Edit2, Trash2, Activity } from 'lucide-react';
 
 const initialBranches = [
   { id: 1, name: 'Downtown Core HQ', address: '120 Fitness Blvd, Financial District', manager: 'Sarah Jenkins', phone: '+1 555-0192', activeMembers: 1250, status: 'Active' },

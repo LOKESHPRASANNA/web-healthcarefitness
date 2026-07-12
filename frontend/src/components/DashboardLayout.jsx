@@ -35,7 +35,7 @@ export default function DashboardLayout({ children }) {
   return (
     <div className="min-h-screen flex relative" style={{ backgroundColor: '#F8FAFC' }}>
 
-      {/* Layer 1: Background image — clearly visible, subtle */}
+      {/* Layer 1: Background image — elegant grayscale watermark, 7% opacity for perfect visibility and zero text clash */}
       <div
         aria-hidden="true"
         style={{
@@ -46,20 +46,10 @@ export default function DashboardLayout({ children }) {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.12,        // 12% — clearly visible as a watermark
+          opacity: 0.07,        // 7% opacity makes it clearly visible as a watermark
+          filter: 'grayscale(100%) contrast(115%) brightness(105%)', // matches theme, removes color clashes
           pointerEvents: 'none',
-        }}
-      />
-
-      {/* Layer 2: Soft white gradient overlay — preserves text/card readability */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'fixed',
-          inset: 0,
-          zIndex: 1,
-          background: 'linear-gradient(135deg, rgba(248,250,252,0.82) 0%, rgba(238,245,255,0.78) 100%)',
-          pointerEvents: 'none',
+          transition: 'background-image 0.8s ease-in-out',
         }}
       />
 

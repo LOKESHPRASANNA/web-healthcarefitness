@@ -117,7 +117,7 @@ export default function AICoach() {
   const completedTasks = todayPlan.filter(t => t.done).length;
 
   return (
-    <div className="min-h-screen bg-surface-50 p-6">
+    <div className="min-h-screen bg-transparent p-6">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
