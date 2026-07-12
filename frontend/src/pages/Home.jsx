@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Activity, Star, Users, Dumbbell, ArrowRight, ShieldCheck, Zap, Trophy, Heart, 
-  Flame, LineChart, Brain, Clock, CalendarCheck, CreditCard, CheckCircle2, MessageSquare, Play
+  Flame, LineChart, Brain, Clock, CalendarCheck, CreditCard, CheckCircle2, MessageSquare, Play, X
 } from 'lucide-react';
 
 const stats = [
