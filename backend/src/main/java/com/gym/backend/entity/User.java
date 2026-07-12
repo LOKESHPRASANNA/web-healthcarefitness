@@ -32,6 +32,25 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+
+    @Column(name = "theme_preference")
+    private String themePreference = "system";
+
+    @Column(name = "push_notifications")
+    private Boolean pushNotifications = true;
+
+    @Column(name = "marketing_emails")
+    private Boolean marketingEmails = false;
+
+    @Column(name = "avatar_url")
+    private String avatarUrl;
+
+    @Column(name = "current_streak")
+    private Integer currentStreak = 0;
+
+    @Column(name = "last_workout_date")
+    private LocalDateTime lastWorkoutDate;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
@@ -120,4 +139,18 @@ public class User {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    public String getThemePreference() { return themePreference; }
+    public void setThemePreference(String themePreference) { this.themePreference = themePreference; }
+    public Boolean getPushNotifications() { return pushNotifications; }
+    public void setPushNotifications(Boolean pushNotifications) { this.pushNotifications = pushNotifications; }
+    public Boolean getMarketingEmails() { return marketingEmails; }
+    public void setMarketingEmails(Boolean marketingEmails) { this.marketingEmails = marketingEmails; }
+    public String getAvatarUrl() { return avatarUrl; }
+    public void setAvatarUrl(String avatarUrl) { this.avatarUrl = avatarUrl; }
+    public Integer getCurrentStreak() { return currentStreak; }
+    public void setCurrentStreak(Integer currentStreak) { this.currentStreak = currentStreak; }
+    public LocalDateTime getLastWorkoutDate() { return lastWorkoutDate; }
+    public void setLastWorkoutDate(LocalDateTime lastWorkoutDate) { this.lastWorkoutDate = lastWorkoutDate; }
+
 }

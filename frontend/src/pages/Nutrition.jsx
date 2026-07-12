@@ -1,9 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { nutritionData } from '../data/nutritionData';
-import { Search, Flame, Droplets, Apple, ChevronRight, Activity, CalendarDays } from 'lucide-react';
+import { Search, Flame, Droplets, Apple, ChevronRight, Activity, CalendarDays, Utensils } from 'lucide-react';
 
 const categories = ['All', 'Vegetables', 'Fruits', 'Proteins', 'Healthy Fats', 'Carbohydrates'];
+
+const ImageWithFallback = ({ src, alt, category }) => {
+  const [error, setError] = useState(false);
+  
+  if (error || !src) {
+    return (
+      <div className="w-full h-full bg-surface-200 flex flex-col items-center justify-center text-surface-500 group-hover:scale-110 transition-transform duration-700">
+        <Utensils size={32} className="mb-2 opacity-50" />
+        <span className="text-xs font-bold uppercase tracking-wider">{category}</span>
+      </div>
+    );
+  }
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+      loading="lazy" 
+      onError={() => setError(true)}
+    />
+  );
+};
 
 export default function Nutrition() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -95,7 +118,7 @@ export default function Nutrition() {
               className="card-interactive overflow-hidden group border border-surface-200/50 bg-surface-100"
             >
               <div className="h-48 overflow-hidden relative">
-                <img src={food.image} alt={food.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                <ImageWithFallback src={food.image} alt={food.name} category={food.category} />
                 <div className="absolute top-3 right-3 px-3 py-1 bg-surface-100/90 backdrop-blur-md rounded-full text-xs font-bold text-surface-800 border border-surface-200 shadow-sm">
                   {food.serving}
                 </div>

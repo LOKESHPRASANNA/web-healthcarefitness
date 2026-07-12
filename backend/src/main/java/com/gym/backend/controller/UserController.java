@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -80,12 +81,27 @@ public class UserController {
                 return ResponseEntity.status(403).body(response);
             }
 
-            // Mock the user object format the frontend expects
+            // Fetch full user to return all settings to frontend
             Map<String, Object> userData = new HashMap<>();
-            userData.put("id", userDetails.getId());
-            userData.put("username", userDetails.getUsername());
-            userData.put("email", userDetails.getEmail());
-            userData.put("role", role);
+            List<User> users = userRepository.findByUsername(userDetails.getUsername());
+            User user = users.isEmpty() ? null : users.get(0);
+            if (user != null) {
+                userData.put("id", user.getId());
+                userData.put("username", user.getUsername());
+                userData.put("email", user.getEmail());
+                userData.put("role", role);
+                userData.put("fullName", user.getFullName());
+                userData.put("themePreference", user.getThemePreference());
+                userData.put("pushNotifications", user.getPushNotifications());
+                userData.put("marketingEmails", user.getMarketingEmails());
+                userData.put("avatarUrl", user.getAvatarUrl());
+                userData.put("currentStreak", user.getCurrentStreak());
+            } else {
+                userData.put("id", userDetails.getId());
+                userData.put("username", userDetails.getUsername());
+                userData.put("email", userDetails.getEmail());
+                userData.put("role", role);
+            }
 
             response.put("success", true);
             response.put("message", "Login successful");
@@ -106,4 +122,51 @@ public class UserController {
         response.put("users", userService.getAllUsers());
         return ResponseEntity.ok(response);
     }
+
+    @PutMapping("/users/{id}/settings")
+    public ResponseEntity<Map<String, Object>> updateSettings(@PathVariable Long id, @RequestBody Map<String, Object> payload) {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            Optional<User> userOpt = userRepository.findById(id);
+            if (!userOpt.isPresent()) {
+                response.put("success", false);
+                response.put("message", "User not found");
+                return ResponseEntity.status(404).body(response);
+            }
+            User user = userOpt.get();
+            
+            if (payload.containsKey("themePreference")) user.setThemePreference((String) payload.get("themePreference"));
+            if (payload.containsKey("pushNotifications")) user.setPushNotifications((Boolean) payload.get("pushNotifications"));
+            if (payload.containsKey("marketingEmails")) user.setMarketingEmails((Boolean) payload.get("marketingEmails"));
+            if (payload.containsKey("avatarUrl")) user.setAvatarUrl((String) payload.get("avatarUrl"));
+            if (payload.containsKey("fullName")) user.setFullName((String) payload.get("fullName"));
+            
+            userRepository.save(user);
+            
+            response.put("success", true);
+            response.put("message", "Settings updated");
+            
+            // return updated user data
+            Map<String, Object> userData = new HashMap<>();
+            userData.put("id", user.getId());
+            userData.put("username", user.getUsername());
+            userData.put("email", user.getEmail());
+            userData.put("role", user.getRole());
+            userData.put("fullName", user.getFullName());
+            userData.put("themePreference", user.getThemePreference());
+            userData.put("pushNotifications", user.getPushNotifications());
+            userData.put("marketingEmails", user.getMarketingEmails());
+            userData.put("avatarUrl", user.getAvatarUrl());
+            userData.put("currentStreak", user.getCurrentStreak());
+            
+            response.put("user", userData);
+            
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("success", false);
+            response.put("message", e.getMessage());
+            return ResponseEntity.status(500).body(response);
+        }
+    }
+
 }

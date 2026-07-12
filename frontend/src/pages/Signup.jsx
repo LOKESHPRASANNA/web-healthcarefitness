@@ -123,11 +123,11 @@ export default function Signup() {
       {/* Right side - Full Bleed Editorial Image */}
       <div className="hidden lg:flex w-1/2 relative bg-surface-100 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-blend-multiply"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop")' }}
+          className="absolute inset-0 bg-cover bg-center bg-blend-multiply transition-transform duration-1000 scale-105"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522898467493-49726bf28798?q=80&w=1470&auto=format&fit=crop")' }}
         >
           {/* Subtle warm gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-900/80 via-surface-900/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-900/90 via-surface-900/40 to-transparent"></div>
         </div>
         
         <div className="relative z-10 p-16 flex flex-col justify-end h-full w-full">
@@ -137,15 +137,15 @@ export default function Signup() {
             transition={{ delay: 0.2 }}
             className="font-display text-4xl md:text-5xl font-bold text-white max-w-lg leading-[1.1]"
           >
-            "Your body can stand almost anything. It's your mind that you have to convince."
+            "Surround yourself with those who challenge you, push you, and inspire you."
           </motion.blockquote>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-surface-200 mt-6 text-lg font-medium tracking-wide"
+            className="text-surface-200 mt-6 text-lg font-medium tracking-wide flex items-center gap-2"
           >
-            Start your transformation today.
+            <span className="w-8 h-[2px] bg-accent inline-block"></span> Find your community today.
           </motion.p>
         </div>
       </div>

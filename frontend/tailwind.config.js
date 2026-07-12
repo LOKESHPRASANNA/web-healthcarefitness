@@ -10,33 +10,42 @@ export default {
       colors: {
         // Semantic Surfaces (Warm off-whites)
         surface: {
-          50: '#FCFBFA', // Base background
-          100: '#F5F4F1', // Elevated cards
-          200: '#E6E4DD', // Borders
-          300: '#D4D2C9',
-          400: '#A3A095',
-          500: '#737064',
-          600: '#524F45',
-          700: '#3D3A32',
-          800: '#292621', // Primary body text
-          900: '#141310', // Display headers
+          50: '#F8FAFC',
+          100: '#F5F7FB',
+          200: '#EEF5FF',
+          300: '#E2E8F0',
+          400: '#CBD5E1',
+          500: '#94A3B8',
+          600: '#64748B',
+          700: '#475569',
+          800: '#1E293B', // Dark Navy Text
+          900: '#0F172A', // Display headers
         },
         primary: {
-          light: '#2E3A4A',
-          DEFAULT: '#1B2430', // Deep rich navy/slate
-          dark: '#0F151D',
+          light: '#F8FAFC',
+          DEFAULT: '#F5F7FB',
+          dark: '#EEF5FF',
         },
         accent: {
-          light: '#3B82F6',
-          DEFAULT: '#2563EB', // Brand blue
+          light: '#60A5FA', // Electric Blue light
+          DEFAULT: '#2563EB', // Royal Blue
           dark: '#1D4ED8',
+        },
+        emerald: {
+          DEFAULT: '#10B981',
+        },
+        orange: {
+          DEFAULT: '#F97316',
+        },
+        purple: {
+          DEFAULT: '#8B5CF6',
         },
         success: {
           DEFAULT: '#10B981',
           light: '#D1FAE5'
         },
         warning: {
-          DEFAULT: '#F59E0B',
+          DEFAULT: '#F97316',
           light: '#FEF3C7'
         },
         danger: {
@@ -46,7 +55,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'Manrope', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'premium': '0 4px 6px -1px rgb(0 0 0 / 0.02), 0 10px 15px -3px rgb(0 0 0 / 0.04)',

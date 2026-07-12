@@ -1,19 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSearchParams } from 'react-router-dom';
 import { workoutData } from '../data/workoutData';
-import { Search, Flame, Timer, PlayCircle, Filter, Activity, ArrowRight } from 'lucide-react';
+import { Search, Flame, Timer, PlayCircle, Filter, Activity, ArrowRight, Dumbbell } from 'lucide-react';
 
 const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 const categories = ['All', 'Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Legs', 'Abs', 'Cardio', 'Yoga'];
 
+const ImageWithFallback = ({ src, alt, category }) => {
+  const [error, setError] = useState(false);
+  
+  if (error || !src) {
+    return (
+      <div className="w-full h-full bg-surface-200 flex flex-col items-center justify-center text-surface-500 group-hover:scale-110 transition-transform duration-700">
+        <Dumbbell size={32} className="mb-2 opacity-50" />
+        <span className="text-xs font-bold uppercase tracking-wider">{category}</span>
+      </div>
+    );
+  }
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100" 
+      loading="lazy" 
+      onError={() => setError(true)}
+    />
+  );
+};
+
 export default function Workouts() {
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [activeDifficulty, setActiveDifficulty] = useState('All');
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
 
+  const activeCategory = searchParams.get('muscle') || 'All';
+  const activeDifficulty = searchParams.get('difficulty') || 'All';
+
+  const updateFilters = (key, value) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (value === 'All') {
+      newParams.delete(key);
+    } else {
+      newParams.set(key, value);
+    }
+    setSearchParams(newParams);
+  };
+
   const filteredWorkouts = workoutData.filter(workout => {
-    const matchesCategory = activeCategory === 'All' || workout.category === activeCategory;
-    const matchesDifficulty = activeDifficulty === 'All' || workout.difficulty === activeDifficulty;
+    const matchesCategory = activeCategory === 'All' || workout.category.toLowerCase() === activeCategory.toLowerCase();
+    const matchesDifficulty = activeDifficulty === 'All' || workout.difficulty.toLowerCase() === activeDifficulty.toLowerCase();
     const matchesSearch = workout.name.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesDifficulty && matchesSearch;
   });
@@ -56,9 +92,9 @@ export default function Workouts() {
             {categories.map(cat => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => updateFilters('muscle', cat)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all border ${
-                  activeCategory === cat 
+                  activeCategory.toLowerCase() === cat.toLowerCase() 
                     ? 'bg-accent border-accent text-white' 
                     : 'bg-slate-800/30 border-surface-200/50 text-surface-500 hover:bg-slate-700/50'
                 }`}
@@ -75,9 +111,9 @@ export default function Workouts() {
             {difficulties.slice(1).map(diff => (
               <button
                 key={diff}
-                onClick={() => setActiveDifficulty(activeDifficulty === diff ? 'All' : diff)}
+                onClick={() => updateFilters('difficulty', activeDifficulty.toLowerCase() === diff.toLowerCase() ? 'All' : diff)}
                 className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                  activeDifficulty === diff
+                  activeDifficulty.toLowerCase() === diff.toLowerCase()
                     ? 'bg-surface-100/10 text-surface-800 shadow-sm'
                     : 'text-surface-500 hover:text-slate-300'
                 }`}
@@ -103,7 +139,7 @@ export default function Workouts() {
               className="card overflow-hidden group border border-surface-200/50 bg-slate-900/60 hover:bg-slate-800/80 transition-all hover:border-accent/30 flex flex-col"
             >
               <div className="h-48 overflow-hidden relative shrink-0">
-                <img src={workout.image} alt={workout.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100" loading="lazy" />
+                <ImageWithFallback src={workout.image} alt={workout.name} category={workout.category} />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   <span className={`px-2 py-1 rounded md backdrop-blur-md text-xs font-bold text-surface-800 border border-surface-200 ${

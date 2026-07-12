@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
-import { Scale, Target, Activity, Camera, TrendingDown, TrendingUp } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from 'recharts';
+import { Scale, Target, Activity, Camera, TrendingDown, TrendingUp, Trophy, Plus, Medal } from 'lucide-react';
+import { AuthContext } from '../context/AuthContext';
 
 const weightData = [
   { month: 'Jan', weight: 85, fat: 22 },
@@ -27,6 +28,64 @@ const bodyMeasurements = [
 ];
 
 export default function Progress() {
+  const { user } = useContext(AuthContext);
+  const [prs, setPrs] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchPRs = async () => {
+    if (!user || !user.id) return;
+    try {
+      const res = await fetch(`/api/personal-records/user/${user.id}`);
+      const data = await res.json();
+      if (Array.isArray(data)) {
+        setPrs(data);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    fetchPRs();
+  }, [user]);
+
+  const handleAddPR = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const newPr = {
+      userId: user.id,
+      exerciseName: formData.get('exerciseName'),
+      weight: parseFloat(formData.get('weight')),
+      reps: parseInt(formData.get('reps')),
+    };
+    
+    setLoading(true);
+    try {
+      await fetch('/api/personal-records', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newPr)
+      });
+      fetchPRs();
+      e.target.reset();
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Group PRs by exercise for the chart
+  const getChartData = () => {
+    const grouped = {};
+    prs.forEach(pr => {
+      if (!grouped[pr.exerciseName] || grouped[pr.exerciseName].weight < pr.weight) {
+        grouped[pr.exerciseName] = { name: pr.exerciseName, max: pr.weight };
+      }
+    });
+    return Object.values(grouped).slice(0, 5); // top 5 exercises
+  };
+
   return (
     <div className="max-w-7xl mx-auto h-full pb-20">
       {/* Header */}
@@ -118,13 +177,13 @@ export default function Progress() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
-          className="card p-6 bg-slate-900/60 border border-surface-200/50 backdrop-blur-md"
+          className="card p-6 bg-slate-900/60 border border-surface-200/50 backdrop-blur-md flex flex-col"
         >
           <div className="flex justify-between items-center mb-6">
             <h3 className="font-display text-xl font-bold text-surface-900">Measurements</h3>
             <button className="text-accent text-sm font-semibold hover:underline">Update</button>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 overflow-y-auto flex-1 pr-2">
             {bodyMeasurements.map((item, idx) => (
               <div key={idx} className="bg-surface-100/50 rounded-xl p-4 border border-surface-200/50 flex items-center justify-between">
                 <div>
@@ -140,14 +199,71 @@ export default function Progress() {
           </div>
         </motion.div>
       </div>
+      
+      {/* Personal Records Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="mb-8"
+      >
+        <h3 className="text-2xl font-bold text-surface-800 mb-6 flex items-center gap-2"><Trophy className="text-yellow-500" /> Personal Records</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          <div className="card p-6 bg-slate-900/60 border border-surface-200/50">
+            <h4 className="font-bold text-surface-900 mb-4">Log a New PR</h4>
+            <form onSubmit={handleAddPR} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-surface-500 uppercase mb-2">Exercise Name</label>
+                <input required name="exerciseName" type="text" placeholder="e.g. Bench Press" className="w-full bg-[#EEF4FF] border border-surface-200 rounded-lg px-4 py-2 focus:border-accent outline-none" />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-surface-500 uppercase mb-2">Weight (kg/lbs)</label>
+                  <input required name="weight" type="number" step="0.5" placeholder="100" className="w-full bg-[#EEF4FF] border border-surface-200 rounded-lg px-4 py-2 focus:border-accent outline-none" />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-surface-500 uppercase mb-2">Reps</label>
+                  <input required name="reps" type="number" placeholder="5" className="w-full bg-[#EEF4FF] border border-surface-200 rounded-lg px-4 py-2 focus:border-accent outline-none" />
+                </div>
+              </div>
+              <button disabled={loading} type="submit" className="w-full btn-primary py-2.5 rounded-lg flex justify-center items-center gap-2">
+                <Plus size={16} /> {loading ? 'Saving...' : 'Save Record'}
+              </button>
+            </form>
+          </div>
+          
+          <div className="lg:col-span-2 card p-6 bg-slate-900/60 border border-surface-200/50 flex flex-col">
+            <h4 className="font-bold text-surface-900 mb-4">Top Records Overview</h4>
+            {prs.length === 0 ? (
+              <div className="flex-1 flex flex-col items-center justify-center text-surface-400">
+                <Medal size={40} className="mb-2 opacity-50" />
+                <p>No personal records logged yet.</p>
+              </div>
+            ) : (
+              <div className="flex-1 min-h-[250px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={getChartData()} margin={{ top: 20, right: 0, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} opacity={0.3} />
+                    <XAxis dataKey="name" axisLine={false} tickLine={false} dy={10} fontSize={12} />
+                    <YAxis axisLine={false} tickLine={false} fontSize={12} />
+                    <Tooltip cursor={{fill: '#f1f5f9'}} contentStyle={{ borderRadius: '8px' }} />
+                    <Bar dataKey="max" fill="#3B82F6" radius={[6, 6, 0, 0]} barSize={40} name="Max Weight" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
 
       {/* Progress Photos */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.6 }}
       >
-        <h3 className="text-2xl font-bold text-surface-800 mb-6">Transformation Journey</h3>
+        <h3 className="text-2xl font-bold text-surface-800 mb-6 flex items-center gap-2"><Camera className="text-accent" /> Transformation Journey</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { date: 'Jan 1', label: 'Day 1', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=400&auto=format&fit=crop' },

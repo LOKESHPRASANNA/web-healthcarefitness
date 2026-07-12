@@ -1,10 +1,85 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { User, Bell, Shield, Moon, Sun, Smartphone, Key, CreditCard } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
 export default function Settings() {
-  const { user } = useContext(AuthContext);
+  const { user, updateUser } = useContext(AuthContext);
+  
+  const [formData, setFormData] = useState({
+    fullName: '',
+    username: '',
+    email: '',
+    themePreference: 'system',
+    pushNotifications: true,
+    marketingEmails: false,
+    avatarUrl: ''
+  });
+  
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  // Sync state with Context when it loads
+  useEffect(() => {
+    if (user) {
+      setFormData({
+        fullName: user.fullName || '',
+        username: user.username || '',
+        email: user.email || '',
+        themePreference: user.themePreference || 'system',
+        pushNotifications: user.pushNotifications ?? true,
+        marketingEmails: user.marketingEmails ?? false,
+        avatarUrl: user.avatarUrl || ''
+      });
+      
+      // Apply theme on load
+      if (user.themePreference === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, [user]);
+
+  const handleToggleTheme = (theme) => {
+    setFormData({...formData, themePreference: theme});
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
+
+  const handleSave = async () => {
+    setLoading(true);
+    setMessage('');
+    try {
+      const response = await fetch(`/api/users/${user.id}/settings`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        updateUser(data.user);
+        setMessage('Settings saved successfully.');
+      } else {
+        setMessage('Failed to save settings: ' + data.message);
+      }
+    } catch (err) {
+      setMessage('Network error while saving settings.');
+    } finally {
+      setLoading(false);
+      setTimeout(() => setMessage(''), 3000);
+    }
+  };
+
+  const avatarFallback = formData.fullName 
+    ? formData.fullName.charAt(0).toUpperCase() 
+    : (formData.username ? formData.username.charAt(0).toUpperCase() : 'U');
 
   return (
     <div className="max-w-5xl mx-auto h-full pb-20">
@@ -39,33 +114,60 @@ export default function Settings() {
         {/* Content Area */}
         <div className="md:col-span-3 space-y-8">
           
+          {message && (
+             <div className="bg-surface-100/10 border border-surface-200/50 text-surface-800 px-4 py-3 rounded-xl font-medium">
+               {message}
+             </div>
+          )}
+
           {/* Profile Section */}
           <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="card p-8 bg-slate-900/60 border border-surface-200/50">
             <h3 className="font-display text-xl font-bold text-surface-900 mb-6">Public Profile</h3>
             <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
               <div className="flex flex-col items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-[#EEF4FF] border-2 border-accent flex items-center justify-center text-accent text-3xl font-bold">
-                  {user?.fullName?.charAt(0) || 'U'}
-                </div>
+                {formData.avatarUrl ? (
+                  <img src={formData.avatarUrl} alt="Avatar" className="w-24 h-24 rounded-full border-2 border-accent object-cover" />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-[#EEF4FF] border-2 border-accent flex items-center justify-center text-accent text-3xl font-bold">
+                    {avatarFallback}
+                  </div>
+                )}
                 <button className="text-sm font-semibold text-surface-600 hover:text-white transition-colors bg-surface-100/5 px-4 py-2 rounded-lg border border-surface-200">Change Avatar</button>
               </div>
               <div className="flex-1 w-full space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-surface-500 uppercase tracking-wider mb-2">Full Name</label>
-                    <input type="text" defaultValue={user?.fullName || ''} className="w-full bg-[#EEF4FF] border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none focus:border-accent" />
+                    <input 
+                      type="text" 
+                      value={formData.fullName} 
+                      onChange={e => setFormData({...formData, fullName: e.target.value})}
+                      className="w-full bg-[#EEF4FF] border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none focus:border-accent" 
+                    />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-surface-500 uppercase tracking-wider mb-2">Username</label>
-                    <input type="text" defaultValue={user?.username || ''} className="w-full bg-[#EEF4FF] border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none focus:border-accent" />
+                    <input 
+                      type="text" 
+                      value={formData.username} 
+                      disabled
+                      className="w-full bg-[#EEF4FF] opacity-70 cursor-not-allowed border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none" 
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-surface-500 uppercase tracking-wider mb-2">Email Address</label>
-                  <input type="email" defaultValue={user?.email || ''} className="w-full bg-[#EEF4FF] border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none focus:border-accent" />
+                  <input 
+                    type="email" 
+                    value={formData.email} 
+                    disabled
+                    className="w-full bg-[#EEF4FF] opacity-70 cursor-not-allowed border border-surface-200 rounded-xl px-4 py-2.5 text-surface-800 focus:outline-none" 
+                  />
                 </div>
                 <div className="flex justify-end pt-4">
-                  <button className="btn-primary py-2.5 px-6 rounded-xl">Save Changes</button>
+                  <button onClick={handleSave} disabled={loading} className="btn-primary py-2.5 px-6 rounded-xl">
+                    {loading ? 'Saving...' : 'Save Changes'}
+                  </button>
                 </div>
               </div>
             </div>
@@ -82,13 +184,13 @@ export default function Settings() {
                 </div>
                 <div className="flex bg-[#EEF4FF] p-1 rounded-xl border border-surface-200/50">
                   <button 
-                    onClick={() => document.documentElement.classList.add('dark')}
-                    className="px-4 py-1.5 rounded-lg text-sm font-bold bg-surface-100/10 text-surface-800 flex items-center gap-2 transition-colors hover:bg-surface-100/20">
+                    onClick={() => handleToggleTheme('dark')}
+                    className={`px-4 py-1.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors ${formData.themePreference === 'dark' ? 'bg-surface-100/10 text-surface-800' : 'text-surface-500 hover:bg-surface-100/5'}`}>
                     <Moon size={14}/> Dark
                   </button>
                   <button 
-                    onClick={() => document.documentElement.classList.remove('dark')}
-                    className="px-4 py-1.5 rounded-lg text-sm font-bold text-surface-500 hover:text-white flex items-center gap-2 transition-colors hover:bg-surface-100/5">
+                    onClick={() => handleToggleTheme('light')}
+                    className={`px-4 py-1.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors ${formData.themePreference === 'light' ? 'bg-surface-100/10 text-surface-800' : 'text-surface-500 hover:bg-surface-100/5'}`}>
                     <Sun size={14}/> Light
                   </button>
                 </div>
@@ -100,7 +202,7 @@ export default function Settings() {
                   <p className="text-sm text-surface-500 mt-1">Receive alerts for workouts, meals, and classes.</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked />
+                  <input type="checkbox" className="sr-only peer" checked={formData.pushNotifications} onChange={e => setFormData({...formData, pushNotifications: e.target.checked})} />
                   <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-100 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"></div>
                 </label>
               </div>
@@ -111,10 +213,16 @@ export default function Settings() {
                   <p className="text-sm text-surface-500 mt-1">Receive promotional offers and newsletters.</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" />
+                  <input type="checkbox" className="sr-only peer" checked={formData.marketingEmails} onChange={e => setFormData({...formData, marketingEmails: e.target.checked})} />
                   <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-100 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"></div>
                 </label>
               </div>
+            </div>
+            
+            <div className="flex justify-end pt-8">
+              <button onClick={handleSave} disabled={loading} className="btn-primary py-2.5 px-6 rounded-xl">
+                {loading ? 'Saving...' : 'Save Preferences'}
+              </button>
             </div>
           </motion.section>
 

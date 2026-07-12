@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Flame, Target, ChevronDown, CheckCircle, CreditCard, Calendar, Droplets, Heart, Medal, Trophy, Star } from 'lucide-react';
+import { Activity, Flame, Target, ChevronDown, CheckCircle, CreditCard, Calendar, Droplets, Heart, Medal, Trophy, Star, User } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { AuthContext } from '../context/AuthContext';
 
@@ -38,8 +38,32 @@ const StatCard = ({ title, value, subtitle, icon: Icon, colorClass, delay, gradi
 export default function Dashboard() {
   const { user } = useContext(AuthContext);
 
+  const profileIncomplete = user && (!user.fullName || !user.avatarUrl);
+
   return (
     <div className="max-w-7xl mx-auto h-full pb-20">
+      
+      {profileIncomplete && (
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8 bg-surface-100/30 border border-accent/30 rounded-xl p-4 flex items-center justify-between shadow-sm backdrop-blur-sm"
+        >
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-accent/10 rounded-lg text-accent">
+              <User size={20} />
+            </div>
+            <div>
+              <p className="text-sm font-bold text-surface-900">Complete your profile</p>
+              <p className="text-xs text-surface-500 font-medium">Add a photo and your full name to get the most out of FitnessPlus.</p>
+            </div>
+          </div>
+          <a href="/settings" className="text-sm font-bold text-accent hover:text-accent-dark transition-colors px-4 py-2 bg-accent/10 rounded-lg">
+            Go to Settings
+          </a>
+        </motion.div>
+      )}
+
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -61,7 +85,7 @@ export default function Dashboard() {
           icon={Flame} colorClass="bg-orange-500" gradientClass="bg-orange-500" delay={0.1} 
         />
         <StatCard 
-          title="Exercise Streak" value="5 Days" subtitle="Personal Best: 14 Days"
+          title="Exercise Streak" value={`${user?.currentStreak || 0} Days`} subtitle="Keep the momentum going!"
           icon={Star} colorClass="bg-yellow-500" gradientClass="bg-yellow-500" delay={0.2} 
         />
         <StatCard 
