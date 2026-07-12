@@ -72,8 +72,8 @@ export default function Nutrition() {
             onClick={() => setActiveCategory(cat)}
             className={`px-6 py-2.5 rounded-full font-medium whitespace-nowrap transition-all duration-300 border ${
               activeCategory === cat 
-                ? 'bg-accent border-accent text-slate-800 shadow-lg shadow-blue-900/5 shadow-accent/20' 
-                : 'bg-slate-800/50 border-slate-200 text-slate-600 hover:bg-slate-700 hover:border-white/20'
+                ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-600/20' 
+                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-blue-600'
             }`}
           >
             {cat}
@@ -92,11 +92,11 @@ export default function Nutrition() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               key={food.id}
-              className="card overflow-hidden group border border-slate-100 bg-slate-900/60 hover:bg-slate-800/80 transition-all hover:border-accent/30"
+              className="card overflow-hidden group border border-slate-100 bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all"
             >
               <div className="h-48 overflow-hidden relative">
                 <img src={food.image} alt={food.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-                <div className="absolute top-3 right-3 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-semibold text-slate-800 border border-slate-200">
+                <div className="absolute top-3 right-3 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-800 border border-slate-200 shadow-sm">
                   {food.serving}
                 </div>
               </div>
