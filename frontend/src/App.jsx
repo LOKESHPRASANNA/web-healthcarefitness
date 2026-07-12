@@ -48,21 +48,21 @@ function App() {
         <Routes>
           {/* Public Routes (Use Standard Layout) */}
           <Route path="/" element={
-            <div className="min-h-screen flex flex-col relative bg-primary-light dark:bg-primary-dark">
+            <div className="min-h-screen flex flex-col relative bg-primary-light ">
               <Navbar />
               <main className="flex-1"><Home /></main>
               <AIChatWidget />
             </div>
           } />
           <Route path="/login" element={
-            <div className="min-h-screen flex flex-col relative bg-primary-light dark:bg-primary-dark">
+            <div className="min-h-screen flex flex-col relative bg-primary-light ">
               <Navbar />
               <main className="flex-1"><Login /></main>
               <AIChatWidget />
             </div>
           } />
           <Route path="/signup" element={
-            <div className="min-h-screen flex flex-col relative bg-primary-light dark:bg-primary-dark">
+            <div className="min-h-screen flex flex-col relative bg-primary-light ">
               <Navbar />
               <main className="flex-1"><Signup /></main>
               <AIChatWidget />

@@ -37,8 +37,8 @@ export default function Anatomy3D() {
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 font-bold mb-3 border border-cyan-500/20 text-xs uppercase tracking-wider">
             <Box size={14} /> WebXR Engine Sandbox
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-2">3D Anatomy Visualizer</h1>
-          <p className="text-slate-400">Interactive spatial mapping of muscle activation groups.</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 tracking-tight mb-2">3D Anatomy Visualizer</h1>
+          <p className="text-slate-500">Interactive spatial mapping of muscle activation groups.</p>
         </div>
       </motion.div>
 
@@ -46,8 +46,8 @@ export default function Anatomy3D() {
         
         {/* Left Col: Exercise Selector & Metrics */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="card p-6 bg-slate-900/60 border border-white/5 flex-1">
-            <h3 className="font-bold text-white mb-4 text-lg">Select Movement</h3>
+          <div className="card p-6 bg-slate-900/60 border border-slate-100 flex-1">
+            <h3 className="font-bold text-slate-800 mb-4 text-lg">Select Movement</h3>
             <div className="space-y-3 mb-8">
               {exercises.map(ex => (
                 <button
@@ -55,8 +55,8 @@ export default function Anatomy3D() {
                   onClick={() => setSelectedExercise(ex)}
                   className={`w-full text-left p-4 rounded-xl border transition-all ${
                     selectedExercise.id === ex.id 
-                      ? 'bg-cyan-500/10 border-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.2)]' 
-                      : 'bg-slate-800/30 border-white/5 text-slate-400 hover:bg-slate-800'
+                      ? 'bg-cyan-500/10 border-cyan-500 text-slate-800 shadow-[0_0_15px_rgba(6,182,212,0.2)]' 
+                      : 'bg-slate-800/30 border-slate-100 text-slate-500 hover:bg-slate-800'
                   }`}
                 >
                   <div className="font-bold mb-1">{ex.name}</div>
@@ -67,24 +67,24 @@ export default function Anatomy3D() {
               ))}
             </div>
 
-            <h3 className="font-bold text-white mb-4 text-lg flex items-center gap-2">
+            <h3 className="font-bold text-slate-800 mb-4 text-lg flex items-center gap-2">
               <Activity size={18} className="text-cyan-400" /> Activation Data
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-800/50 p-4 rounded-xl border border-white/5">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-1">Total Activation</span>
+              <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Total Activation</span>
                 <span className="text-2xl font-black text-cyan-400">{selectedExercise.activation}%</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-xl border border-white/5">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-1">Est. Recovery</span>
-                <span className="text-lg font-bold text-white">{selectedExercise.recovery}</span>
+              <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Est. Recovery</span>
+                <span className="text-lg font-bold text-slate-800">{selectedExercise.recovery}</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-xl border border-white/5">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-1">Calories Burned</span>
-                <span className="text-lg font-bold text-white">{selectedExercise.burn}</span>
+              <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Calories Burned</span>
+                <span className="text-lg font-bold text-slate-800">{selectedExercise.burn}</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-xl border border-white/5">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-1">Difficulty</span>
+              <div className="bg-white/50 p-4 rounded-xl border border-slate-100">
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Difficulty</span>
                 <span className="text-lg font-bold text-orange-400">{selectedExercise.difficulty}</span>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function Anatomy3D() {
           
           {/* Viewport Toolbar */}
           <div className="absolute top-6 left-6 right-6 flex justify-between items-start z-20">
-            <div className="flex gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-white/10 backdrop-blur-md">
+            <div className="flex gap-2 bg-white/80 p-1.5 rounded-xl border border-slate-200 backdrop-blur-md">
               {['Male', 'Female'].map(g => (
                 <button 
                   key={g} 
@@ -109,10 +109,10 @@ export default function Anatomy3D() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <button onClick={triggerRotation} className="w-10 h-10 bg-slate-900/80 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md">
+              <button onClick={triggerRotation} className="w-10 h-10 bg-white/80 border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md">
                 <RotateCcw size={18} />
               </button>
-              <button className="w-10 h-10 bg-slate-900/80 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md">
+              <button className="w-10 h-10 bg-white/80 border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md">
                 <ZoomIn size={18} />
               </button>
             </div>
@@ -136,9 +136,9 @@ export default function Anatomy3D() {
               
               <div className="relative z-10 w-48 h-96">
                  {/* Silhouette */}
-                 <div className="absolute inset-0 bg-slate-800/80 backdrop-blur-sm rounded-[100px] border border-slate-700 shadow-[inset_0_0_50px_rgba(0,0,0,0.8)]">
+                 <div className="absolute inset-0 bg-slate-800/80 backdrop-blur-sm rounded-[100px] border border-blue-100 shadow-[inset_0_0_50px_rgba(0,0,0,0.8)]">
                     {/* Head */}
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-20 bg-slate-800/80 border border-slate-700 rounded-[40%]"></div>
+                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-20 bg-slate-800/80 border border-blue-100 rounded-[40%]"></div>
                  </div>
 
                  {/* Simulated Muscle Heatmaps based on selection */}
@@ -197,17 +197,17 @@ export default function Anatomy3D() {
           <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end z-20 pointer-events-none">
              <div className="bg-black/50 backdrop-blur-md border border-cyan-900/50 px-4 py-2 rounded-xl">
                <span className="text-xs text-cyan-400 font-bold uppercase tracking-wider block mb-1">Primary Target</span>
-               <span className="text-white font-bold">{selectedExercise.primary}</span>
+               <span className="text-slate-800 font-bold">{selectedExercise.primary}</span>
              </div>
              
              <div className="flex gap-4">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></div>
-                  <span className="text-xs text-slate-300 font-bold">Primary</span>
+                  <span className="text-xs text-slate-600 font-bold">Primary</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.8)]"></div>
-                  <span className="text-xs text-slate-300 font-bold">Secondary</span>
+                  <span className="text-xs text-slate-600 font-bold">Secondary</span>
                 </div>
              </div>
           </div>

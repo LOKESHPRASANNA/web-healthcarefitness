@@ -45,10 +45,10 @@ export default function Login() {
   return (
     <div className="min-h-screen flex">
       {/* Left side - Image */}
-      <div className="hidden lg:flex w-1/2 relative bg-primary-dark overflow-hidden">
+      <div className="hidden lg:flex w-1/2 relative bg-[#F8FAFD] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")' }}
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")' }}
         >
           <div className="absolute inset-0 bg-primary-dark/40"></div>
         </div>
@@ -57,7 +57,7 @@ export default function Login() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl font-bold text-white max-w-lg leading-tight"
+            className="text-4xl font-bold text-slate-800 max-w-lg leading-tight"
           >
             "The only bad workout is the one that didn't happen."
           </motion.blockquote>
@@ -65,7 +65,7 @@ export default function Login() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-slate-300 mt-4 text-lg"
+            className="text-slate-600 mt-4 text-lg"
           >
             Join millions pushing their limits daily.
           </motion.p>
@@ -73,13 +73,13 @@ export default function Login() {
       </div>
 
       {/* Right side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light dark:bg-primary-dark">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light ">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="w-full max-w-md card p-10"
         >
-          <h2 className="text-3xl font-bold text-primary dark:text-white mb-2">Welcome Back</h2>
+          <h2 className="text-3xl font-bold text-primary  mb-2">Welcome Back</h2>
           <p className="text-secondary dark:text-slate-400 mb-6">Please enter your details to sign in.</p>
           
           {successMessage && (
@@ -102,7 +102,7 @@ export default function Login() {
                 value={formData.usernameOrEmail}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="Enter your email or username" 
               />
             </div>
@@ -114,7 +114,7 @@ export default function Login() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="Enter your password" 
               />
             </div>
@@ -127,7 +127,7 @@ export default function Login() {
               <a href="#" className="text-accent hover:text-accent-dark font-medium transition-colors">Forgot password?</a>
             </div>
 
-            <button disabled={loading} type="submit" className="w-full py-3.5 mt-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50">
+            <button disabled={loading} type="submit" className="w-full py-3.5 mt-2 bg-accent text-slate-800 font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-blue-900/5 hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50">
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
           </form>

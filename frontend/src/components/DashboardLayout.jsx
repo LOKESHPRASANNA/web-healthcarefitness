@@ -8,19 +8,19 @@ export default function DashboardLayout({ children }) {
   
   // Background configuration map
   const bgConfig = {
-    '/dashboard': 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")',
+    '/dashboard': 'url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")',
     '/nutrition': 'url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1470&auto=format&fit=crop")',
-    '/workouts': 'url("https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")',
+    '/workouts': 'url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")',
     '/attendance': 'radial-gradient(circle at 50% 50%, #0F172A 0%, #1E293B 100%)', // Minimal blue glass
     '/membership': 'linear-gradient(135deg, #1E293B 0%, #4B3800 100%)', // Luxury gold gradient
     '/payments': 'linear-gradient(135deg, #0F172A 0%, #111827 100%)', // Professional finance style
-    '/progress': 'url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop")', // Transformation
+    '/progress': 'url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop")', // Transformation
     '/community': 'url("https://images.unsplash.com/photo-1528318269466-69d95fc59aef?q=80&w=1470&auto=format&fit=crop")', // Social style
     '/ai-coach': 'linear-gradient(135deg, #0F172A 0%, #2E1065 100%)', // Purple AI Gradient
     '/settings': 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)', // Minimal white/gray
   };
 
-  const currentBg = bgConfig[location.pathname] || 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")';
+  const currentBg = bgConfig[location.pathname] || 'url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")';
   const isDarkBg = !currentBg.includes('#F8FAFC');
 
   return (

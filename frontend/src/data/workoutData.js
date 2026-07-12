@@ -19,7 +19,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 2,
@@ -41,7 +41,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 3,
@@ -63,7 +63,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 4,
@@ -85,7 +85,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 5,
@@ -107,7 +107,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 6,
@@ -129,7 +129,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 7,
@@ -151,7 +151,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 8,
@@ -173,7 +173,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 9,
@@ -195,7 +195,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 10,
@@ -217,7 +217,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 11,
@@ -239,7 +239,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 12,
@@ -261,7 +261,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 13,
@@ -283,7 +283,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 14,
@@ -305,7 +305,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 15,
@@ -327,7 +327,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 16,
@@ -349,7 +349,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 17,
@@ -371,7 +371,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 18,
@@ -393,7 +393,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 19,
@@ -415,7 +415,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 20,
@@ -437,7 +437,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 21,
@@ -459,7 +459,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 22,
@@ -481,7 +481,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 23,
@@ -503,7 +503,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 24,
@@ -525,7 +525,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 25,
@@ -547,7 +547,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 26,
@@ -569,7 +569,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 27,
@@ -591,7 +591,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 28,
@@ -613,7 +613,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 29,
@@ -635,7 +635,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 30,
@@ -657,7 +657,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 31,
@@ -679,7 +679,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 32,
@@ -701,7 +701,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 33,
@@ -723,7 +723,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 34,
@@ -745,7 +745,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 35,
@@ -767,7 +767,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 36,
@@ -789,7 +789,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 37,
@@ -811,7 +811,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 38,
@@ -833,7 +833,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 39,
@@ -855,7 +855,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 40,
@@ -877,7 +877,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 41,
@@ -899,7 +899,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 42,
@@ -921,7 +921,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 43,
@@ -943,7 +943,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 44,
@@ -965,7 +965,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 45,
@@ -987,7 +987,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 46,
@@ -1009,7 +1009,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 47,
@@ -1031,7 +1031,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 48,
@@ -1053,7 +1053,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 49,
@@ -1075,7 +1075,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 50,
@@ -1097,7 +1097,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 51,
@@ -1119,7 +1119,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 52,
@@ -1141,7 +1141,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 53,
@@ -1163,7 +1163,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 54,
@@ -1185,7 +1185,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 55,
@@ -1207,7 +1207,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 56,
@@ -1229,7 +1229,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 57,
@@ -1251,7 +1251,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 58,
@@ -1273,7 +1273,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 59,
@@ -1295,7 +1295,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 60,
@@ -1317,7 +1317,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 61,
@@ -1339,7 +1339,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 62,
@@ -1361,7 +1361,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 63,
@@ -1383,7 +1383,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 64,
@@ -1405,7 +1405,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 65,
@@ -1427,7 +1427,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 66,
@@ -1449,7 +1449,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 67,
@@ -1471,7 +1471,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 68,
@@ -1493,7 +1493,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 69,
@@ -1515,7 +1515,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 70,
@@ -1537,7 +1537,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 71,
@@ -1559,7 +1559,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 72,
@@ -1581,7 +1581,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 73,
@@ -1603,7 +1603,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 74,
@@ -1625,7 +1625,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 75,
@@ -1647,7 +1647,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 76,
@@ -1669,7 +1669,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 77,
@@ -1691,7 +1691,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 78,
@@ -1713,7 +1713,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 79,
@@ -1735,7 +1735,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 80,
@@ -1757,7 +1757,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 81,
@@ -1779,7 +1779,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 82,
@@ -1801,7 +1801,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 83,
@@ -1823,7 +1823,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 84,
@@ -1845,7 +1845,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 85,
@@ -1867,7 +1867,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 86,
@@ -1889,7 +1889,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 87,
@@ -1911,7 +1911,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 88,
@@ -1933,7 +1933,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 89,
@@ -1955,7 +1955,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 90,
@@ -1977,7 +1977,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 91,
@@ -1999,7 +1999,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 92,
@@ -2021,7 +2021,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 93,
@@ -2043,7 +2043,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 94,
@@ -2065,7 +2065,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 95,
@@ -2087,7 +2087,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 96,
@@ -2109,7 +2109,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 97,
@@ -2131,7 +2131,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 98,
@@ -2153,7 +2153,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 99,
@@ -2175,7 +2175,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 100,
@@ -2197,7 +2197,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 101,
@@ -2219,7 +2219,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 102,
@@ -2241,7 +2241,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 103,
@@ -2263,7 +2263,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 104,
@@ -2285,7 +2285,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 105,
@@ -2307,7 +2307,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 106,
@@ -2329,7 +2329,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 107,
@@ -2351,7 +2351,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 108,
@@ -2373,7 +2373,7 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=400&auto=format&fit=crop"
   },
   {
     "id": 109,
@@ -2395,6 +2395,6 @@ export const workoutData = [
     "benefits": "Builds strength and endurance.",
     "mistakes": "Rushing the movement, improper breathing.",
     "suitableFor": "Anyone looking to improve fitness.",
-    "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1528825871115-3581a5387919-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop"
   }
 ];

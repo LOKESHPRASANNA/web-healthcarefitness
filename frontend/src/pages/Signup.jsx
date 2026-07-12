@@ -44,13 +44,13 @@ export default function Signup() {
   return (
     <div className="min-h-screen flex">
       {/* Left side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light dark:bg-primary-dark overflow-y-auto">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-primary-light  overflow-y-auto">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="w-full max-w-md card p-8 my-8"
         >
-          <h2 className="text-3xl font-bold text-primary dark:text-white mb-2">Create Account</h2>
+          <h2 className="text-3xl font-bold text-primary  mb-2">Create Account</h2>
           <p className="text-secondary dark:text-slate-400 mb-6">Join the world's most advanced fitness platform.</p>
           
           {error && (
@@ -67,7 +67,7 @@ export default function Signup() {
                 value={formData.fullName}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="John Doe" 
               />
             </div>
@@ -78,7 +78,7 @@ export default function Signup() {
                 value={formData.username}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="johndoe99" 
               />
             </div>
@@ -90,7 +90,7 @@ export default function Signup() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="john@example.com" 
               />
             </div>
@@ -102,12 +102,12 @@ export default function Signup() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary dark:text-white" 
+                className="w-full bg-white  border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-primary " 
                 placeholder="Create a strong password" 
               />
             </div>
 
-            <button disabled={loading} type="submit" className="w-full py-3.5 mt-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl disabled:opacity-50">
+            <button disabled={loading} type="submit" className="w-full py-3.5 mt-4 bg-accent text-slate-800 font-semibold rounded-xl hover:bg-accent-dark transition-all shadow-lg shadow-blue-900/5 hover:shadow-xl disabled:opacity-50">
               {loading ? 'Creating account...' : 'Create Account'}
             </button>
           </form>
@@ -119,10 +119,10 @@ export default function Signup() {
       </div>
 
       {/* Right side - Image */}
-      <div className="hidden lg:flex w-1/2 relative bg-primary-dark overflow-hidden">
+      <div className="hidden lg:flex w-1/2 relative bg-[#F8FAFD] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")' }}
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")' }}
         >
           <div className="absolute inset-0 bg-primary-dark/60"></div>
         </div>
@@ -131,7 +131,7 @@ export default function Signup() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl font-bold text-white max-w-lg leading-tight"
+            className="text-4xl font-bold text-slate-800 max-w-lg leading-tight"
           >
             "Your body can stand almost anything. It's your mind that you have to convince."
           </motion.blockquote>
@@ -139,7 +139,7 @@ export default function Signup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-slate-300 mt-4 text-lg"
+            className="text-slate-600 mt-4 text-lg"
           >
             Start your transformation today.
           </motion.p>

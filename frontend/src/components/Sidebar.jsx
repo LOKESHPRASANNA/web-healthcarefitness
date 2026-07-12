@@ -34,9 +34,9 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <div className="w-64 h-screen fixed left-0 top-0 glass-panel border-r border-white/10 flex flex-col z-40 bg-slate-900/80 backdrop-blur-2xl">
+    <div className="w-64 h-screen fixed left-0 top-0 glass-panel border-r border-slate-200 flex flex-col z-40 bg-white/80 backdrop-blur-2xl">
       <div className="p-6">
-        <div className="flex items-center gap-2 text-2xl font-bold tracking-tight text-white mb-8">
+        <div className="flex items-center gap-2 text-2xl font-bold tracking-tight text-slate-800 mb-8">
           <Activity className="text-accent" size={28} strokeWidth={2.5} />
           <span>Fitness<span className="text-accent">Plus</span></span>
         </div>
@@ -49,8 +49,8 @@ export default function Sidebar() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
                   isActive 
-                    ? 'bg-accent text-white shadow-lg shadow-accent/25' 
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' 
+                    : 'text-slate-500 hover:text-blue-600 hover:bg-blue-50'
                 }`
               }
             >

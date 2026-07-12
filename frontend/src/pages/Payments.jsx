@@ -31,8 +31,8 @@ export default function Payments() {
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10"
       >
         <div>
-          <h1 className="text-4xl font-bold text-white tracking-tight mb-2">Billing & Payments</h1>
-          <p className="text-slate-400">Manage your subscription, invoices, and payment methods.</p>
+          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Billing & Payments</h1>
+          <p className="text-slate-500">Manage your subscription, invoices, and payment methods.</p>
         </div>
         <button className="btn-primary py-2.5 px-6 rounded-xl flex items-center gap-2">
           <CreditCard size={18} /> Update Payment Method
@@ -45,18 +45,18 @@ export default function Payments() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="card p-6 bg-gradient-to-br from-indigo-900/50 to-slate-900 border border-indigo-500/30 flex flex-col justify-between"
+          className="card p-6 bg-gradient-to-br from-indigo-900/50 to-white border border-indigo-500/30 flex flex-col justify-between"
         >
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Clock size={20} className="text-indigo-400" />
-              <h3 className="font-bold text-white">Next Payment</h3>
+              <h3 className="font-bold text-slate-800">Next Payment</h3>
             </div>
-            <p className="text-5xl font-bold text-white mb-2">$129<span className="text-lg text-slate-400 font-medium">.00</span></p>
-            <p className="text-sm text-slate-300">Due on July 01, 2026</p>
+            <p className="text-5xl font-bold text-slate-800 mb-2">$129<span className="text-lg text-slate-500 font-medium">.00</span></p>
+            <p className="text-sm text-slate-600">Due on July 01, 2026</p>
           </div>
-          <div className="mt-6 pt-6 border-t border-white/10 flex justify-between items-center">
-            <span className="text-sm font-medium text-slate-400">Auto-pay enabled</span>
+          <div className="mt-6 pt-6 border-t border-slate-200 flex justify-between items-center">
+            <span className="text-sm font-medium text-slate-500">Auto-pay enabled</span>
             <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-bold border border-green-500/20">Active</span>
           </div>
         </motion.div>
@@ -66,14 +66,14 @@ export default function Payments() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="lg:col-span-2 card p-6 bg-slate-900/60 border border-white/5"
+          className="lg:col-span-2 card p-6 bg-slate-900/60 border border-slate-100"
         >
           <div className="flex justify-between items-center mb-6">
             <div>
-              <h3 className="font-bold text-white mb-1">Spend History</h3>
-              <p className="text-sm text-slate-400">Total YTD: <span className="text-white font-bold">$904.00</span></p>
+              <h3 className="font-bold text-slate-800 mb-1">Spend History</h3>
+              <p className="text-sm text-slate-500">Total YTD: <span className="text-slate-800 font-bold">$904.00</span></p>
             </div>
-            <div className="p-2 bg-white/5 rounded-lg border border-white/10 text-slate-300">
+            <div className="p-2 bg-white/5 rounded-lg border border-slate-200 text-slate-600">
               <TrendingUp size={20} />
             </div>
           </div>
@@ -100,10 +100,10 @@ export default function Payments() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="card bg-slate-900/60 border border-white/5 overflow-hidden"
+        className="card bg-slate-900/60 border border-slate-100 overflow-hidden"
       >
-        <div className="p-6 border-b border-white/5 flex justify-between items-center bg-slate-800/30">
-          <h3 className="font-bold text-xl text-white">Invoice History</h3>
+        <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-800/30">
+          <h3 className="font-bold text-xl text-slate-800">Invoice History</h3>
           <button className="text-sm font-semibold text-accent hover:text-accent-light transition-colors flex items-center gap-1">
             Download All <Download size={16} />
           </button>
@@ -111,7 +111,7 @@ export default function Payments() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-slate-900/80 border-b border-white/5 text-xs uppercase tracking-wider text-slate-500 font-bold">
+              <tr className="bg-white/80 border-b border-slate-100 text-xs uppercase tracking-wider text-slate-500 font-bold">
                 <th className="p-4 pl-6">Invoice</th>
                 <th className="p-4">Date</th>
                 <th className="p-4">Description</th>
@@ -123,17 +123,17 @@ export default function Payments() {
             <tbody className="divide-y divide-white/5 text-sm">
               {invoices.map((inv) => (
                 <tr key={inv.id} className="hover:bg-slate-800/30 transition-colors">
-                  <td className="p-4 pl-6 font-medium text-white">{inv.id}</td>
-                  <td className="p-4 text-slate-400">{inv.date}</td>
-                  <td className="p-4 text-slate-300">{inv.items}</td>
-                  <td className="p-4 font-bold text-white">{inv.amount}</td>
+                  <td className="p-4 pl-6 font-medium text-slate-800">{inv.id}</td>
+                  <td className="p-4 text-slate-500">{inv.date}</td>
+                  <td className="p-4 text-slate-600">{inv.items}</td>
+                  <td className="p-4 font-bold text-slate-800">{inv.amount}</td>
                   <td className="p-4">
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-green-500/10 text-green-400 font-semibold text-xs border border-green-500/20">
                       <CheckCircle size={12} /> {inv.status}
                     </span>
                   </td>
                   <td className="p-4 text-right pr-6">
-                    <button className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 transition-colors border border-white/5">
+                    <button className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-600 transition-colors border border-slate-100">
                       <Download size={16} />
                     </button>
                   </td>

@@ -15,8 +15,8 @@ export default function Profile() {
         className="mb-10 flex justify-between items-end"
       >
         <div>
-          <h1 className="text-4xl font-bold text-white tracking-tight mb-2">Member Profile</h1>
-          <p className="text-slate-400">View your account details and emergency health profile.</p>
+          <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Member Profile</h1>
+          <p className="text-slate-500">View your account details and emergency health profile.</p>
         </div>
         <button 
           onClick={() => setIsEditing(!isEditing)}
@@ -35,39 +35,39 @@ export default function Profile() {
           transition={{ delay: 0.1 }}
           className="md:col-span-1 space-y-6"
         >
-          <div className="card p-8 bg-slate-900/60 border border-white/5 flex flex-col items-center text-center relative overflow-hidden">
+          <div className="card p-8 bg-slate-900/60 border border-slate-100 flex flex-col items-center text-center relative overflow-hidden">
             <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-accent to-purple-500"></div>
-            <div className="w-32 h-32 rounded-full border-4 border-slate-800 bg-slate-800 flex items-center justify-center text-5xl font-bold text-accent shadow-2xl mb-4">
+            <div className="w-32 h-32 rounded-full border-4 border-blue-50 bg-[#EEF4FF] flex items-center justify-center text-5xl font-bold text-accent shadow-xl shadow-blue-900/5 mb-4">
               {user?.fullName?.charAt(0) || 'U'}
             </div>
-            <h2 className="text-2xl font-bold text-white">{user?.fullName || 'User'}</h2>
-            <p className="text-sm text-slate-400 mb-6">{user?.email || 'user@example.com'}</p>
-            <div className="w-full bg-slate-800/50 rounded-xl p-4 border border-white/5 flex justify-between">
+            <h2 className="text-2xl font-bold text-slate-800">{user?.fullName || 'User'}</h2>
+            <p className="text-sm text-slate-500 mb-6">{user?.email || 'user@example.com'}</p>
+            <div className="w-full bg-white/50 rounded-xl p-4 border border-slate-100 flex justify-between">
               <div>
                 <p className="text-xs text-slate-500 uppercase font-bold">Status</p>
                 <p className="text-sm text-green-400 font-bold">Elite Member</p>
               </div>
               <div className="text-right">
                 <p className="text-xs text-slate-500 uppercase font-bold">Joined</p>
-                <p className="text-sm text-white font-bold">Jan 2026</p>
+                <p className="text-sm text-slate-800 font-bold">Jan 2026</p>
               </div>
             </div>
           </div>
 
-          <div className="card p-6 bg-slate-900/60 border border-white/5">
-            <h3 className="font-bold text-white mb-4 flex items-center gap-2"><Activity size={18}/> Quick Stats</h3>
+          <div className="card p-6 bg-slate-900/60 border border-slate-100">
+            <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2"><Activity size={18}/> Quick Stats</h3>
             <div className="space-y-4">
-              <div className="flex justify-between items-center pb-3 border-b border-white/5">
-                <span className="text-slate-400 text-sm">Age</span>
-                <span className="text-white font-bold">28</span>
+              <div className="flex justify-between items-center pb-3 border-b border-slate-100">
+                <span className="text-slate-500 text-sm">Age</span>
+                <span className="text-slate-800 font-bold">28</span>
               </div>
-              <div className="flex justify-between items-center pb-3 border-b border-white/5">
-                <span className="text-slate-400 text-sm">Height</span>
-                <span className="text-white font-bold">180 cm</span>
+              <div className="flex justify-between items-center pb-3 border-b border-slate-100">
+                <span className="text-slate-500 text-sm">Height</span>
+                <span className="text-slate-800 font-bold">180 cm</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-slate-400 text-sm">Current Weight</span>
-                <span className="text-white font-bold">77 kg</span>
+                <span className="text-slate-500 text-sm">Current Weight</span>
+                <span className="text-slate-800 font-bold">77 kg</span>
               </div>
             </div>
           </div>
@@ -89,8 +89,8 @@ export default function Profile() {
                 <AlertCircle size={24} />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-white">Emergency Health Profile</h2>
-                <p className="text-sm text-slate-400">Critical medical information for trainers and first responders.</p>
+                <h2 className="text-2xl font-bold text-slate-800">Emergency Health Profile</h2>
+                <p className="text-sm text-slate-500">Critical medical information for trainers and first responders.</p>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ export default function Profile() {
                   <Droplet size={12} /> Blood Group
                 </label>
                 {isEditing ? (
-                  <select className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-red-500">
+                  <select className="w-full bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-3 text-slate-800 outline-none focus:border-red-500">
                     <option>O+</option>
                     <option>O-</option>
                     <option>A+</option>
@@ -112,7 +112,7 @@ export default function Profile() {
                     <option>AB-</option>
                   </select>
                 ) : (
-                  <div className="w-full bg-black/20 border border-white/5 rounded-xl px-4 py-3 text-white font-bold text-lg flex items-center gap-2">
+                  <div className="w-full bg-black/20 border border-slate-100 rounded-xl px-4 py-3 text-slate-800 font-bold text-lg flex items-center gap-2">
                     <Droplet className="text-red-500" size={18} fill="currentColor" /> O+
                   </div>
                 )}
@@ -123,9 +123,9 @@ export default function Profile() {
                   <Phone size={12} /> Emergency Contact
                 </label>
                 {isEditing ? (
-                  <input type="text" defaultValue="Sarah Connor (+1 555-0198)" className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-red-500" />
+                  <input type="text" defaultValue="Sarah Connor (+1 555-0198)" className="w-full bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-3 text-slate-800 outline-none focus:border-red-500" />
                 ) : (
-                  <div className="w-full bg-black/20 border border-white/5 rounded-xl px-4 py-3 text-white font-medium">
+                  <div className="w-full bg-black/20 border border-slate-100 rounded-xl px-4 py-3 text-slate-800 font-medium">
                     Sarah Connor (+1 555-0198)
                   </div>
                 )}
@@ -136,9 +136,9 @@ export default function Profile() {
                   <Activity size={12} /> Known Medical Conditions
                 </label>
                 {isEditing ? (
-                  <textarea defaultValue="Mild Asthma (Exercise-induced)" className="w-full h-24 bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-red-500 resize-none" />
+                  <textarea defaultValue="Mild Asthma (Exercise-induced)" className="w-full h-24 bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-3 text-slate-800 outline-none focus:border-red-500 resize-none" />
                 ) : (
-                  <div className="w-full bg-black/20 border border-white/5 rounded-xl px-4 py-4 text-white">
+                  <div className="w-full bg-black/20 border border-slate-100 rounded-xl px-4 py-4 text-slate-800">
                     <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 rounded-lg text-sm border border-red-500/20 font-medium">
                       Mild Asthma (Exercise-induced)
                     </span>
@@ -151,9 +151,9 @@ export default function Profile() {
                   <Shield size={12} /> Allergies
                 </label>
                 {isEditing ? (
-                  <textarea defaultValue="Penicillin, Peanuts" className="w-full h-24 bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-red-500 resize-none" />
+                  <textarea defaultValue="Penicillin, Peanuts" className="w-full h-24 bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-3 text-slate-800 outline-none focus:border-red-500 resize-none" />
                 ) : (
-                  <div className="w-full bg-black/20 border border-white/5 rounded-xl px-4 py-4 text-white flex gap-2">
+                  <div className="w-full bg-black/20 border border-slate-100 rounded-xl px-4 py-4 text-slate-800 flex gap-2">
                     <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-lg text-sm border border-orange-500/20 font-medium">
                       Penicillin
                     </span>

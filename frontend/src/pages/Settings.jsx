@@ -14,8 +14,8 @@ export default function Settings() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10"
       >
-        <h1 className="text-4xl font-bold text-white tracking-tight mb-2">Settings</h1>
-        <p className="text-slate-400">Manage your profile, preferences, and account security.</p>
+        <h1 className="text-4xl font-bold text-slate-800 tracking-tight mb-2">Settings</h1>
+        <p className="text-slate-500">Manage your profile, preferences, and account security.</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -40,29 +40,29 @@ export default function Settings() {
         <div className="md:col-span-3 space-y-8">
           
           {/* Profile Section */}
-          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="card p-8 bg-slate-900/60 border border-white/5">
-            <h3 className="text-xl font-bold text-white mb-6">Public Profile</h3>
+          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="card p-8 bg-slate-900/60 border border-slate-100">
+            <h3 className="text-xl font-bold text-slate-800 mb-6">Public Profile</h3>
             <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
               <div className="flex flex-col items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-accent flex items-center justify-center text-accent text-3xl font-bold">
+                <div className="w-24 h-24 rounded-full bg-[#EEF4FF] border-2 border-accent flex items-center justify-center text-accent text-3xl font-bold">
                   {user?.fullName?.charAt(0) || 'U'}
                 </div>
-                <button className="text-sm font-semibold text-slate-300 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10">Change Avatar</button>
+                <button className="text-sm font-semibold text-slate-600 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-lg border border-slate-200">Change Avatar</button>
               </div>
               <div className="flex-1 w-full space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Full Name</label>
-                    <input type="text" defaultValue={user?.fullName || ''} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent" />
+                    <input type="text" defaultValue={user?.fullName || ''} className="w-full bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-2.5 text-slate-800 focus:outline-none focus:border-accent" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Username</label>
-                    <input type="text" defaultValue={user?.username || ''} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent" />
+                    <input type="text" defaultValue={user?.username || ''} className="w-full bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-2.5 text-slate-800 focus:outline-none focus:border-accent" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
-                  <input type="email" defaultValue={user?.email || ''} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent" />
+                  <input type="email" defaultValue={user?.email || ''} className="w-full bg-[#EEF4FF] border border-slate-200 rounded-xl px-4 py-2.5 text-slate-800 focus:outline-none focus:border-accent" />
                 </div>
                 <div className="flex justify-end pt-4">
                   <button className="btn-primary py-2.5 px-6 rounded-xl">Save Changes</button>
@@ -72,18 +72,18 @@ export default function Settings() {
           </motion.section>
 
           {/* Preferences Section */}
-          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="card p-8 bg-slate-900/60 border border-white/5">
-            <h3 className="text-xl font-bold text-white mb-6">Preferences</h3>
+          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="card p-8 bg-slate-900/60 border border-slate-100">
+            <h3 className="text-xl font-bold text-slate-800 mb-6">Preferences</h3>
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-6 border-b border-white/5">
+              <div className="flex items-center justify-between pb-6 border-b border-slate-100">
                 <div>
-                  <h4 className="font-bold text-white flex items-center gap-2"><Moon size={18}/> Theme Mode</h4>
-                  <p className="text-sm text-slate-400 mt-1">Switch between dark and light themes.</p>
+                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Moon size={18}/> Theme Mode</h4>
+                  <p className="text-sm text-slate-500 mt-1">Switch between dark and light themes.</p>
                 </div>
-                <div className="flex bg-slate-800 p-1 rounded-xl border border-white/5">
+                <div className="flex bg-[#EEF4FF] p-1 rounded-xl border border-slate-100">
                   <button 
                     onClick={() => document.documentElement.classList.add('dark')}
-                    className="px-4 py-1.5 rounded-lg text-sm font-bold bg-white/10 text-white flex items-center gap-2 transition-colors hover:bg-white/20">
+                    className="px-4 py-1.5 rounded-lg text-sm font-bold bg-white/10 text-slate-800 flex items-center gap-2 transition-colors hover:bg-white/20">
                     <Moon size={14}/> Dark
                   </button>
                   <button 
@@ -94,10 +94,10 @@ export default function Settings() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between pb-6 border-b border-white/5">
+              <div className="flex items-center justify-between pb-6 border-b border-slate-100">
                 <div>
-                  <h4 className="font-bold text-white flex items-center gap-2"><Smartphone size={18}/> Push Notifications</h4>
-                  <p className="text-sm text-slate-400 mt-1">Receive alerts for workouts, meals, and classes.</p>
+                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Smartphone size={18}/> Push Notifications</h4>
+                  <p className="text-sm text-slate-500 mt-1">Receive alerts for workouts, meals, and classes.</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" defaultChecked />
@@ -107,8 +107,8 @@ export default function Settings() {
 
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-white flex items-center gap-2"><Bell size={18}/> Marketing Emails</h4>
-                  <p className="text-sm text-slate-400 mt-1">Receive promotional offers and newsletters.</p>
+                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Bell size={18}/> Marketing Emails</h4>
+                  <p className="text-sm text-slate-500 mt-1">Receive promotional offers and newsletters.</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
@@ -119,13 +119,13 @@ export default function Settings() {
           </motion.section>
 
           {/* Security Section */}
-          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="card p-8 bg-slate-900/60 border border-white/5 border-l-4 border-l-red-500/50">
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2"><Key size={20} className="text-red-400" /> Security</h3>
+          <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="card p-8 bg-slate-900/60 border border-slate-100 border-l-4 border-l-red-500/50">
+            <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2"><Key size={20} className="text-red-400" /> Security</h3>
             <div className="space-y-4">
-              <button className="w-full text-left px-4 py-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors text-white font-medium border border-white/5">
+              <button className="w-full text-left px-4 py-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors text-slate-800 font-medium border border-slate-100">
                 Change Password
               </button>
-              <button className="w-full text-left px-4 py-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors text-white font-medium border border-white/5 flex justify-between items-center">
+              <button className="w-full text-left px-4 py-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors text-slate-800 font-medium border border-slate-100 flex justify-between items-center">
                 <span>Two-Factor Authentication (2FA)</span>
                 <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-md font-bold">Disabled</span>
               </button>
