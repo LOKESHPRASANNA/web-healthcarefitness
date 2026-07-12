@@ -30,7 +30,7 @@ export default function Login() {
       const data = await response.json();
       
       if (response.ok && data.success) {
-        login(data.user);
+        login(data.user, data.token);
         navigate('/dashboard');
       } else {
         setError(data.message || 'Invalid credentials');
@@ -48,7 +48,7 @@ export default function Login() {
       <div className="hidden lg:flex w-1/2 relative bg-primary-dark overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop")' }}
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")' }}
         >
           <div className="absolute inset-0 bg-primary-dark/40"></div>
         </div>

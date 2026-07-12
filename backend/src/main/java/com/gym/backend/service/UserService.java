@@ -44,7 +44,10 @@ public class UserService {
         // Simple search following server.js logic
         return userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail.toLowerCase())
                 .stream()
-                .filter(user -> user.getPassword().equals(password) && user.getRole().equalsIgnoreCase(role))
+                .filter(user -> {
+                    String userRole = user.getRole() != null ? user.getRole() : "user";
+                    return user.getPassword().equals(password) && userRole.equalsIgnoreCase(role);
+                })
                 .findFirst();
     }
     public List<User> getAllUsers() {

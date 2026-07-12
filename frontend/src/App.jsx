@@ -24,6 +24,16 @@ import AICoach from './pages/AICoach';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Admin from './pages/Admin';
+import AIHealthTwin from './pages/AIHealthTwin';
+import AIFitnessScore from './pages/AIFitnessScore';
+import AIVision from './pages/AIVision';
+import AdminBusiness from './pages/AdminBusiness';
+import AdminBranches from './pages/AdminBranches';
+import AdminEmployees from './pages/AdminEmployees';
+import Marketplace from './pages/Marketplace';
+import CreatorDashboard from './pages/CreatorDashboard';
+import Anatomy3D from './pages/Anatomy3D';
+import ExerciseLibrary from './pages/ExerciseLibrary';
 
 // Protected Route Wrapper
 const PrivateRoute = ({ children }) => {
@@ -76,7 +86,17 @@ function App() {
                   <Route path="/ai-coach" element={<AICoach />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/settings" element={<Settings />} />
-                  <Route path="/admin" element={<Admin />} />
+                  <Route path="/admin" element={<Navigate to="/admin/business" replace />} />
+                  <Route path="/admin/business" element={<AdminBusiness />} />
+                  <Route path="/admin/branches" element={<AdminBranches />} />
+                  <Route path="/admin/employees" element={<AdminEmployees />} />
+                  <Route path="/ai-health-twin" element={<AIHealthTwin />} />
+                  <Route path="/ai-fitness-score" element={<AIFitnessScore />} />
+                  <Route path="/ai-vision" element={<AIVision />} />
+                  <Route path="/anatomy" element={<Anatomy3D />} />
+                  <Route path="/exercises" element={<ExerciseLibrary />} />
+                  <Route path="/marketplace" element={<Marketplace />} />
+                  <Route path="/creator" element={<CreatorDashboard />} />
                   
                   {/* Fallback redirect */}
                   <Route path="*" element={<Navigate to="/dashboard" replace />} />

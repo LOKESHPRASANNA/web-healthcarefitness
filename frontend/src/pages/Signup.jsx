@@ -122,7 +122,7 @@ export default function Signup() {
       <div className="hidden lg:flex w-1/2 relative bg-primary-dark overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")' }}
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")' }}
         >
           <div className="absolute inset-0 bg-primary-dark/60"></div>
         </div>

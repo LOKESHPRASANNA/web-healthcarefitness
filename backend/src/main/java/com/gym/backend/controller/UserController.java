@@ -47,22 +47,53 @@ public class UserController {
         }
     }
 
+    @Autowired
+    private org.springframework.security.authentication.AuthenticationManager authenticationManager;
+
+    @Autowired
+    private com.gym.backend.security.JwtUtils jwtUtils;
+
     @PostMapping("/login")
     public ResponseEntity<Map<String, Object>> login(@RequestBody Map<String, String> payload) {
         String usernameOrEmail = payload.get("usernameOrEmail") != null ? payload.get("usernameOrEmail") : payload.get("username"); 
-        // fallback to username if frontend uses it
         String password = payload.get("password");
         String role = payload.get("role") != null ? payload.get("role") : "user";
         
-        Optional<User> userOptional = userService.login(usernameOrEmail, password, role);
         Map<String, Object> response = new HashMap<>();
-        
-        if (userOptional.isPresent()) {
+
+        try {
+            org.springframework.security.core.Authentication authentication = authenticationManager.authenticate(
+                    new org.springframework.security.authentication.UsernamePasswordAuthenticationToken(usernameOrEmail, password));
+            
+            org.springframework.security.core.context.SecurityContextHolder.getContext().setAuthentication(authentication);
+            String jwt = jwtUtils.generateJwtToken(authentication);
+            
+            com.gym.backend.security.UserDetailsImpl userDetails = (com.gym.backend.security.UserDetailsImpl) authentication.getPrincipal();
+            
+            // Validate requested role against actual role, just to be safe
+            boolean roleMatches = userDetails.getAuthorities().stream()
+                    .anyMatch(a -> a.getAuthority().equalsIgnoreCase("ROLE_" + role));
+            
+            if (!roleMatches) {
+                response.put("success", false);
+                response.put("message", "Invalid role for this user");
+                return ResponseEntity.status(403).body(response);
+            }
+
+            // Mock the user object format the frontend expects
+            Map<String, Object> userData = new HashMap<>();
+            userData.put("id", userDetails.getId());
+            userData.put("username", userDetails.getUsername());
+            userData.put("email", userDetails.getEmail());
+            userData.put("role", role);
+
             response.put("success", true);
             response.put("message", "Login successful");
-            response.put("user", userOptional.get());
+            response.put("token", jwt);
+            response.put("user", userData);
             return ResponseEntity.ok(response);
-        } else {
+            
+        } catch (Exception e) {
             response.put("success", false);
             response.put("message", "Invalid credentials");
             return ResponseEntity.status(401).body(response);

@@ -1,15 +1,16 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import VoiceAssistant from './VoiceAssistant';
 
 export default function DashboardLayout({ children }) {
   const location = useLocation();
   
   // Background configuration map
   const bgConfig = {
-    '/dashboard': 'url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")',
+    '/dashboard': 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")',
     '/nutrition': 'url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1470&auto=format&fit=crop")',
-    '/workouts': 'url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")',
+    '/workouts': 'url("https://images.unsplash.com/photo-1574680096145-d05b474e2155-d25dfeac3438?q=80&w=1470&auto=format&fit=crop")',
     '/attendance': 'radial-gradient(circle at 50% 50%, #0F172A 0%, #1E293B 100%)', // Minimal blue glass
     '/membership': 'linear-gradient(135deg, #1E293B 0%, #4B3800 100%)', // Luxury gold gradient
     '/payments': 'linear-gradient(135deg, #0F172A 0%, #111827 100%)', // Professional finance style
@@ -19,7 +20,7 @@ export default function DashboardLayout({ children }) {
     '/settings': 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)', // Minimal white/gray
   };
 
-  const currentBg = bgConfig[location.pathname] || 'url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")';
+  const currentBg = bgConfig[location.pathname] || 'url("https://images.unsplash.com/photo-1581009146145-14e5300c3a48?q=80&w=1470&auto=format&fit=crop")';
   const isDarkBg = !currentBg.includes('#F8FAFC');
 
   return (
@@ -43,6 +44,7 @@ export default function DashboardLayout({ children }) {
       <main className="flex-1 ml-64 relative z-10 p-8 h-screen overflow-y-auto">
         {children}
       </main>
+      <VoiceAssistant />
     </div>
   );
 }

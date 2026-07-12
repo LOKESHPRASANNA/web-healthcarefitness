@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { 
   LayoutDashboard, Apple, Dumbbell, CalendarCheck, 
   CreditCard, Medal, Activity, MessageSquare, 
-  CalendarDays, Users, User, Settings, ShieldAlert
+  CalendarDays, Users, User, Settings, ShieldAlert, Scan, Building2, Briefcase, Store, PenTool, Box, Layers
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -18,9 +18,18 @@ const navItems = [
   { name: 'Payments', path: '/payments', icon: CreditCard },
   { name: 'Community', path: '/community', icon: Users },
   { name: 'AI Coach', path: '/ai-coach', icon: MessageSquare },
+  { name: 'AI Health Twin', path: '/ai-health-twin', icon: Activity },
+  { name: 'AI Fitness Score', path: '/ai-fitness-score', icon: Medal },
+  { name: 'AI Vision', path: '/ai-vision', icon: Scan },
+  { name: '3D Anatomy', path: '/anatomy', icon: Box },
+  { name: 'Exercise Library', path: '/exercises', icon: Layers },
+  { name: 'Marketplace', path: '/marketplace', icon: Store },
+  { name: 'Creator Studio', path: '/creator', icon: PenTool },
   { name: 'Profile', path: '/profile', icon: User },
   { name: 'Settings', path: '/settings', icon: Settings },
-  { name: 'Admin', path: '/admin', icon: ShieldAlert },
+  { name: 'Business KPIs', path: '/admin/business', icon: ShieldAlert },
+  { name: 'Branches', path: '/admin/branches', icon: Building2 },
+  { name: 'Employees', path: '/admin/employees', icon: Briefcase },
 ];
 
 export default function Sidebar() {
